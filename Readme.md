@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Булат Басыров](https://up.htmlacademy.ru/adaptive/17/user/1018079).
-* Наставник: `Неизвестно`.
+* Наставник: [Сайпула Валиев](https://htmlacademy.ru/profile/id227260)
 
 ---
 
