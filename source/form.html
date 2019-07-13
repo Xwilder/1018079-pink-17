@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Academy: Пинк</title>
+</head>
+<body>
+
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Pink">
+    </a>
+    <button class="main-nav__toggle" type="button"></button>
+    <div class="main-nav__wrapper">
+      <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a>Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <div class="headline__wrapper">
+      <h1 class="headline__item">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </div>
+    <form class="form__registration" action="https://echo.htmlacademy.ru">
+      <h2 class="form__headline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</h2>
+      <div class="form__name">
+        <label class="form__name-label">Фамилия:
+          <input class="name-label__input" type="text" placeholder="Укажите фамилию*" name="Фамилия">
+        </label>
+        <label class="form__name-label">Имя:
+          <input class="name-label__input" type="text" placeholder="Введите ваше имя*" name="Имя">
+        </label>
+        <label class="form__name-label">Отчество:
+          <input class="name-label__input" type="text" placeholder="Ну и отчество тоже" name="Отчество">
+        </label>
+      </div>
+      <div class="form__progress progress">
+        <h3 class="progress__headline">Ваши безбашенные
+          достижения в путешествии</h3>
+        <ul class="progress__list">
+          <li class="progress__item">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Сделал селфи с акулой">Сделал селфи с акулой
+            </label>
+          </li>
+          <li class="progress__item">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Обгорел на пляже">Обгорел на пляже
+            </label>
+          </li>
+          <li class="progress__item">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Видел Чака Норриса">Видел Чака Норриса
+            </label>
+          </li>
+          <li class="progress__item">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Накупил сувениров">Накупил сувениров
+            </label>
+          </li>
+          <li class="progress__item">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Удержал башню">Удержал башню
+            </label>
+          </li>
+          <li class="progress__item">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Разгромил отель">Разгромил отель
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form__phone">
+        <label class="form__phone-label">Номер телефона:
+          <input class="phone-label__input" type="text" placeholder="Номер, пожалуйста" name="Номер телефона">
+        </label>
+        <label class="form__phone-label">Адрес почты:
+          <input class="phone-label__input" type="text" placeholder="Введите почту*" name="Адрес почты">
+        </label>
+      </div>
+
+      <div class="form__app">
+        <h3 class="form__app-headline">С каким приложением путешествовали?</h3>
+        <ul class="app__list">
+          <li class="app__item">
+            <label class="app__item-label">
+              <input class="item-label__radio" type="radio" name="app" value="Pink для iOS">Pink для iOS
+            </label>
+          </li>
+          <li class="app__item">
+            <label class="app__item-label">
+              <input class="item-label__radio" type="radio" name="app" value="Pink на Android">Pink на Android
+            </label>
+          </li>
+          <li class="app__item">
+            <label class="app__item-label">
+              <input class="item-label__radio" type="radio" name="app" value="Windows Phone">Windows Phone
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form__emotions">
+        <h3 class="form__emotions-headline">Опишите свои эмоции</h3>
+        <textarea class="form__emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях" name="emotions"></textarea>
+      </div>
+
+      <button type="submit" class="form__button">Отправить форму</button>
+
+      <p class="form__legend"><sup>*</sup> — обязательные поля</p>
+
+    </form>
+  </main>
+
+  <footer class="page-footer">
+    <a class="page-footer__logo">
+      <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Pink">
+    </a>
+    <ul class="social__list">
+      <li class="social__item--Twiter">Twiter</li>
+      <li class="social__item--Facebook">Facebook</li>
+      <li class="social__item--YouTube">YouTube</li>
+    </ul>
+    <p class="developed__wrapper">Разработано</p>
+    <img src="" alt="HTMLacademy">
+  </footer>
+</body>
+</html>
