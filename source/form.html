@@ -36,17 +36,17 @@
     <div class="headline__wrapper">
       <h1 class="headline__item">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </div>
-    <form class="form__wrapper">
+    <form class="form__registration" action="https://echo.htmlacademy.ru">
       <h2 class="form__headline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</h2>
       <div class="form__name">
-        <label class="form__name-label">
-          <input class="name-label__input" type="text">
+        <label class="form__name-label">Фамилия:
+          <input class="name-label__input" type="text" placeholder="Укажите фамилию*" name="Фамилия">
         </label>
-        <label class="form__name-label">
-          <input class="name-label__input" type="text">
+        <label class="form__name-label">Имя:
+          <input class="name-label__input" type="text" placeholder="Введите ваше имя*" name="Имя">
         </label>
-        <label class="form__name-label">
-          <input class="name-label__input" type="text">
+        <label class="form__name-label">Отчество:
+          <input class="name-label__input" type="text" placeholder="Ну и отчество тоже" name="Отчество">
         </label>
       </div>
       <div class="form__progress progress">
@@ -54,44 +54,44 @@
           достижения в путешествии</h3>
         <ul class="progress__list">
           <li class="progress__item">
-            <label class="progress__item-label">Сделал селфи с акулой
-              <input class="item-label__checkbox" type="checkbox">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Сделал селфи с акулой">Сделал селфи с акулой
             </label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">Обгорел на пляже
-              <input class="item-label__checkbox" type="checkbox">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Обгорел на пляже">Обгорел на пляже
             </label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">Видел Чака Норриса
-              <input class="item-label__checkbox" type="checkbox">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Видел Чака Норриса">Видел Чака Норриса
             </label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">Накупил сувениров
-              <input class="item-label__checkbox" type="checkbox">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Накупил сувениров">Накупил сувениров
             </label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">Удержал башню
-              <input class="item-label__checkbox" type="checkbox">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Удержал башню">Удержал башню
             </label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">Разгромил отель
-              <input class="item-label__checkbox" type="checkbox">
+            <label class="progress__item-label">
+              <input class="item-label__checkbox" type="checkbox" value="Разгромил отель">Разгромил отель
             </label>
           </li>
         </ul>
       </div>
 
       <div class="form__phone">
-        <label class="form__phone-label">
-          <input class="phone-label__input" type="text">
+        <label class="form__phone-label">Номер телефона:
+          <input class="phone-label__input" type="text" placeholder="Номер, пожалуйста" name="Номер телефона">
         </label>
-        <label class="form__phone-label">
-          <input class="phone-label__input" type="text">
+        <label class="form__phone-label">Адрес почты:
+          <input class="phone-label__input" type="text" placeholder="Введите почту*" name="Адрес почты">
         </label>
       </div>
 
@@ -99,18 +99,18 @@
         <h3 class="form__app-headline">С каким приложением путешествовали?</h3>
         <ul class="app__list">
           <li class="app__item">
-            <label class="app__item-label">Pink для iOS
-              <input class="item-label__radio" type="radio">
+            <label class="app__item-label">
+              <input class="item-label__radio" type="radio" name="app" value="Pink для iOS">Pink для iOS
             </label>
           </li>
           <li class="app__item">
-            <label class="app__item-label">Pink на Android
-              <input class="item-label__radio" type="radio">
+            <label class="app__item-label">
+              <input class="item-label__radio" type="radio" name="app" value="Pink на Android">Pink на Android
             </label>
           </li>
           <li class="app__item">
-            <label class="app__item-label">Windows Phone
-              <input class="item-label__radio" type="radio">
+            <label class="app__item-label">
+              <input class="item-label__radio" type="radio" name="app" value="Windows Phone">Windows Phone
             </label>
           </li>
         </ul>
@@ -118,7 +118,7 @@
 
       <div class="form__emotions">
         <h3 class="form__emotions-headline">Опишите свои эмоции</h3>
-        <textarea class="form__emotions-text"></textarea>
+        <textarea class="form__emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях" name="emotions"></textarea>
       </div>
 
       <button type="submit" class="form__button">Отправить форму</button>
@@ -133,11 +133,12 @@
       <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Pink">
     </a>
     <ul class="social__list">
-      <li class="social__item">Twiter</li>
-      <li class="social__item">Facebook</li>
-      <li class="social__item">YouTube</li>
+      <li class="social__item--Twiter">Twiter</li>
+      <li class="social__item--Facebook">Facebook</li>
+      <li class="social__item--YouTube">YouTube</li>
     </ul>
     <p class="developed__wrapper">Разработано</p>
+    <img src="" alt="HTMLacademy">
   </footer>
 </body>
 </html>
