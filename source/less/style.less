@@ -1,28 +1,3 @@
-body {
-  background: #ffffff;
-  width: 320px;
-}
-
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  -webkit-clip-path: inset(100%);
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 @font-face {
   font-family: 'Open Sans', sans-serif;
   src: url('../fonts/opensans.woff2') format('woff2'),
@@ -47,6 +22,33 @@ input[type="radio"].visually-hidden {
   font-style: italic;
 }
 
+body {
+  background: #ffffff;
+  width: 320px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 li {
   list-style-type: none;
   a {
@@ -58,8 +60,8 @@ li {
 
 .page-header {
   background-color: #283645;
-  font-style: "Open Sans", sans-serif;
   font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
   .main-nav__toggle {
     background: none;
     border: none;
@@ -69,7 +71,7 @@ li {
     padding: 0;
     margin: 0;
     .site-list__item {
-      width: 320px;
+      width: auto;
       height: 63px;
       font-size: 14px;
     }
