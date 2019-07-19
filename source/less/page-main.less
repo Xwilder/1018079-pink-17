@@ -1,51 +1,64 @@
+@import "variables";
+
 // index.html start
-  .download__wrapper {
-    //background-color: #1d2631;
-    color: white;
+.page-main {
+}
+
+.download__img {
+  background: url("../img/bg-back-tablet.jpg") no-repeat 100%;
+  min-height: 462px;
+  background-size: cover;
+  background-position: center;
+}
+
+.download__wrapper {
+  //background-color: #1d2631;
+  color: white;
+  min-height: 271px;
+}
+.download__headline {
+  margin: 0;
+  border: 2px solid #ffffff;
+  border-radius: 27px;
+  width: 280px;
+  height: 50px;
+}
+.download__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  min-height: 60px;
+  margin-top: 32px;
+  margin-bottom: 28px;
+  .download__item {
+    width: 70px;
   }
-  .download__headline {
-    margin: 0;
-    border: 2px solid #ffffff;
-    border-radius: 27px;
-    width: 280px;
-    height: 50px;
-  }
-  .download__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0;
-    min-height: 60px;
-    margin-top: 32px;
-    margin-bottom: 28px;
-    .download__item {
-      width: 70px;
+  .download__link {
+    width: 70px;
+    height: 60px;
+    &--ios {
+      background: url("../img/logo-apple.svg") no-repeat;
     }
-    .download__link {
-      width: 70px;
-      height: 60px;
-      &--ios {
-        background: url("../img/logo-apple.svg") no-repeat;
-      }
-      &--Android {
-        background: url("../img/logo-android.svg");
-      }
-      &--Windows {
-        background: url("../img/logo-microsoft.svg");
-      }
+    &--Android {
+      background: url("../img/logo-android.svg");
+    }
+    &--Windows {
+      background: url("../img/logo-microsoft.svg");
     }
   }
-  .download__img {
-    margin-top: -69px;
-  }
-  .download__text {
-    margin: 0;
-  }
+}
+.download__img {
+  margin-top: -69px;
+}
+.download__text {
+  margin: 0;
+}
 
 .information__wrapper {
   .information__list {
     min-height: 800px;
-    background-color: #f2f2f2;
+    //background-color: #f2f2f2;
     padding: 0;
     margin: 0;
   }
@@ -53,7 +66,7 @@
 
 .price__wrapper {
   min-height: 500px;
-  background-color: #f2f2f2;
+  //background-color: #f2f2f2;
 }
 
 
@@ -67,7 +80,7 @@
 
 .form__progress,
 .form__app {
-  background: #f2f2f2;
+  //background: #f2f2f2;
 }
 
 
@@ -79,7 +92,7 @@
 }
 
 .upload__block {
-  background: #f2f2f2;
+  //background: #f2f2f2;
   .upload__button {
     background: none;
     margin: 0;
@@ -93,4 +106,14 @@
       border: 2px solid #d22856;
     }
   }
+}
+
+
+@media (min-width: @tablet-width) {
+  min-height: 740px;
+
+}
+
+@media (min-width: @desktop-width) {
+
 }
