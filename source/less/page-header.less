@@ -1,14 +1,30 @@
 .page-header {
-  background-color: #283645;
-  .site-list__item {
-    width: 320px;
-    height: 63px;
-    a {
-      color: #ffffff;
+  //background-color: #283645;
+  .page-header__nav-header {
+    min-height: 69px;
+  }
+  .main-nav__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .main-nav__list {
+    padding: 0;
+    margin: 0;
+    .site-list__item {
+      width: auto;
+      height: 63px;
+      font-size: 14px;
     }
   }
 }
 
-body {
-  background: #red;
+@media (min-width: @tablet-width) {
+
+}
+
+
+@media (min-width: @desktop-width) {
+
 }

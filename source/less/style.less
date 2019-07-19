@@ -1,31 +1,42 @@
 @font-face {
-  font-family: 'Open Sans', sans-serif;
-  src: url('../fonts/opensans.woff2') format('woff2'),
-  url('../fonts/opensans.woff') format('woff');
+  font-family: "Open Sans", sans-serif;
+  src: url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans bold', sans-serif;
-  src: url('../fonts/opensansbold.woff2') format('woff2'),
-  url('../fonts/opensansbold.woff') format('woff');
+  font-family: "Open Sans bold", sans-serif;
+  src: url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
   font-weight: normal;
   font-style: bold;
 }
 
 @font-face {
-  font-family: 'open Sans light', sans-serif;
-  src: url('../fonts/opensanslight.woff2') format('woff2'),
-  url('../fonts/opensanslight.woff') format('woff');
+  font-family: "Open Sans light", sans-serif;
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
   font-weight: normal;
   font-style: italic;
 }
+@import "normalize";
+@import "variables";
+@import "page-header";
+@import "page-main";
+@import "outlines";
+@import "scaffolding";
+
+body > * { background: rgba(255, 0, 0, 0.3); }
+body > * > * { background: rgba(255, 255, 0, 0.3);}
+body > * > * > * { background: rgba(0, 0, 255, 0.3); }
+body > * > * > * > * { background: rgba(0, 255, 255, 0.3); }
 
 body {
-  background: #ffffff;
-  width: 320px;
-  font-family: 'Open Sans', sans-serif;
+  //background: #ffffff;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -48,121 +59,11 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-
 li {
   list-style-type: none;
   a {
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
-  }
-}
-
-.page-header {
-  background-color: #283645;
-  font-weight: normal;
-  font-family: 'Open Sans', sans-serif;
-  .main-nav__toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  .main-nav__list {
-    padding: 0;
-    margin: 0;
-    .site-list__item {
-      width: auto;
-      height: 63px;
-      font-size: 14px;
-    }
-  }
-}
-
-.page-main {
-  .download__wrapper {
-    background-color: #1d2631;
-    color: white;
-  }
-  .download__headline {
-    margin: 0;
-    border: 2px solid #ffffff;
-    border-radius: 27px;
-    width: 280px;
-    height: 50px;
-  }
-  .download__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0;
-    min-height: 60px;
-    margin-top: 32px;
-    margin-bottom: 28px;
-    .download__item {
-      width: 70px;
-    }
-    .download__link {
-      width: 70px;
-      height: 60px;
-      &--ios {
-        background: url("../img/logo-apple.svg") no-repeat;
-      }
-      &--Android {
-        background: url("../img/logo-android.svg");
-      }
-      &--Windows {
-        background: url("../img/logo-microsoft.svg");
-      }
-    }
-  }
-  .download__text {
-    margin: 0;
-  }
-}
-.information__wrapper {
-  .information__list {
-    min-height: 800px;
-    background-color: #f2f2f2;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-.price__wrapper {
-  min-height: 500px;
-  background-color: #f2f2f2;
-}
-// index.html finish
-
-// form.html start
-.redcap {
-  color: #d22856;
-  text-transform: uppercase;
-}
-.form__progress,
-.form__app {
-  background: #f2f2f2;
-}
-
-// form.html finish
-
-// photo.html start
-.photo__item {
-  background: #f2f2f2;
-}
-.upload__block {
-  background: #f2f2f2;
-  .upload__button {
-    background: none;
-    margin: 0;
-    border: 2px solid #dddfe0;
-    border-radius: 27px;
-    width: 280px;
-    height: 50px;
-    color: #dddfe0;
-    &--post {
-      color: #d22856;
-      border: 2px solid #d22856;
-    }
   }
 }
