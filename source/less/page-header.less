@@ -28,10 +28,17 @@
   .page-header__nav-header {
     min-height: 120px;
   }
-
+  .site-list__item {
+    min-height: 70px;
+  }
 }
 
 
 @media (min-width: @desktop-width) {
-
+ .page-header {
+   display: flex;
+   .main-nav__list {
+     display: flex;
+   }
+ }
 }
