@@ -15,18 +15,21 @@
 }
 
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
   margin: 0;
   .site-list__item {
     width: auto;
-    height: 63px;
+    height: 64px;
     font-size: 14px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .page-header__nav-header {
-    min-height: 120px;
+    min-height: 110px;
   }
   .site-list__item {
     min-height: 70px;

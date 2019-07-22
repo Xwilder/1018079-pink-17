@@ -7,13 +7,17 @@
 
 .download__img {
   background: url("../img/bg-back-mobile.jpg") no-repeat 100%;
-  min-height: 462px;
+  min-height: 465px;
   background-size: cover;
   background-position: center;
+  margin-top: -69px;
 }
 
 .download__wrapper {
   //background-color: #1d2631;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
   min-height: 271px;
   &::before {
@@ -21,13 +25,21 @@
   }
 }
 
+.download__headline {
+  display: none;
+}
+
 
 .download__button {
+  display: flex;
+  align-content: center;
   margin: 0;
-  border: 2px solid #ffffff;
+  border: 3px solid #ffffff;
   border-radius: 27px;
   width: 280px;
   height: 50px;
+  margin-top: 28px;
+  font-family: "Open Sans light", sans-serif;
 }
 .download__list {
   display: flex;
@@ -35,33 +47,34 @@
   justify-content: space-around;
   padding: 0;
   min-height: 60px;
-  margin-top: 32px;
-  margin-bottom: 28px;
+  margin-top: 30px;
+  margin-bottom: 25px;
   .download__item {
     width: 70px;
   }
-  .download__link {
+  .download__link--ios {
     width: 70px;
     height: 60px;
-    &--ios {
-      background: url("../img/logo-apple.svg") no-repeat;
-    }
-    &--Android {
-      background: url("../img/logo-android.svg");
-    }
-    &--Windows {
-      background: url("../img/logo-microsoft.svg");
-    }
   }
-}
-.download__img {
-  margin-top: -69px;
 }
 .download__text {
   margin: 0;
 }
 
 .information__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .information__headline {
+    //width: 202px;
+    &:first-child {
+      margin-top: 46px;
+    }
+    &:last-of-type {
+      margin-top: 15px;
+    }
+  }
+
   .information__list {
     min-height: 800px;
     //background-color: #f2f2f2;
@@ -70,9 +83,17 @@
   }
 }
 
+.reviews__effect {
+  display: none;
+}
+
 .price__wrapper {
   min-height: 500px;
   //background-color: #f2f2f2;
+  .price__list {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 
