@@ -1,8 +1,58 @@
 .price__wrapper {
   min-height: 500px;
   //background-color: #f2f2f2;
+  position: relative;
+  .diagonal {
+     position: absolute;
+     top: 25px;
+     width: 100%;
+     height: 10vw;
+   }
   .price__list {
     display: flex;
     flex-direction: row;
+    margin-top: 112px;
+    margin-left: -40px;
+  }
+}
+
+.price__item {
+  width: 280px;
+  .price__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 94px;
+  }
+  .prise__name {
+    margin-top: 22px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  .prise__value {
+    margin-top: 7px;
+    font-size: 24px;
+    margin-bottom: 21px;
+  }
+  .price-tag__list {
+    padding: 0;
+    .price-tag__item {
+      width: 280px;
+      min-height: 60px;
+    }
+  }
+}
+
+.advantages__toggles {
+  width: 280px;
+  text-align: center;
+  .slider__toggle {
+    background: none;
+    padding: 0;
+    width: 6px;
+    height: 6px;
+    border: solid 3px #283645;
+    background-color: #ffffff;
+    border-radius: 50%;
   }
 }
