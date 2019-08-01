@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .information__wrapper {
   display: flex;
   flex-direction: column;
@@ -38,10 +40,47 @@
 }
 
 @media (min-width: @tablet-width) {
-  .information__headline {
-    margin: 0;
-  }
   .information__wrapper {
     max-height: 790px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .information__headline {
+      margin: 0;
+      width: 660px;
+      font-size: 40px;
+      font-weight: 300;
+    }
+    .information__item {
+      text-align: left;
+      width: 300px;
+      margin-top: 40px;
+    }
+    .information__list {
+       position: relative;
+       margin-left: 330px;
+       margin-top: 80px;
+       min-height: 450px;
+     }
   }
+  .information__item-headline {
+    margin: 0;
+  }
+  .information__item-p {
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 1.71;
+
+  }
+
+  .information__list::after {
+    position: absolute;
+    content: "";
+    top: -65px;
+    right: 340px;
+    width: 268px;
+    min-height: 544px;
+    background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat 100%;
+  }
+
 }

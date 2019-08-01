@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .page-footer {
   font-family: "OpenSans", sans-serif;
   display: flex;
@@ -45,4 +47,45 @@
 .map__wrapper {
   margin-top: -385px;
   overflow: hidden;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__contacts {
+    width: 660px;
+    position: relative;
+    .contacts__title {
+      font-size: 40px;
+      font-weight: 300;
+      text-align: center;
+      color: #283645;
+      margin-top: 48px;
+      margin-bottom: 2px;
+    }
+    .contacts__title-list {
+      margin-top: 47px;
+    }
+  }
+  .contacts__tablet-item {
+    display: flex;
+    flex-direction: row;
+    .contacts__left-page {
+      width: 330px;
+    }
+    .contacts__right-page {
+      width: 330px;
+    }
+  }
+  .page-footer__contacts::after {
+    position: absolute;
+    width: 768px;
+    height: 100px;
+    content: "";
+    background: url("../img/bg-triangle-white-footer.svg") no-repeat 100%;
+    background-size: 100%;
+    bottom: -107px;
+    left: -54px;
+  }
+  .map__wrapper {
+    margin-top: 22px;
+  }
 }

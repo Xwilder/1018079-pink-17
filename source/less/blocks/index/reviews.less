@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .reviews__wrapper {
   display: flex;
   flex-direction: column;
@@ -20,6 +22,9 @@
     line-height: 30px;
     font-size: 14px;
   }
+  .reviews__author-age {
+    display: none;
+  }
 }
 
 .reviews__toggles {
@@ -33,5 +38,92 @@
     border: solid 3px #283645;
     background-color: #ffffff;
     border-radius: 50%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__wrapper {
+    margin-top: 0;
+    width: 660px;
+    position: relative;
+  }
+  .reviews__effect {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    min-height: 300px;
+    margin-top: 65px;
+    margin-left: 300px;
+    .reviews__effect-headline {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 0;
+    }
+    .reviews__effect-p {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.71;
+      text-align: left;
+      color: #283645;
+    }
+    .reviews__effect-a {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.71;
+      text-align: left;
+      color: #d22856;
+    }
+  }
+  .reviews__wrapper::after {
+    width: 238px;
+    height: 276px;
+    position: absolute;
+    content: "";
+    background: url("../img/icon-timer.svg") no-repeat;
+    background-size: 100%;
+    top: 57px;
+    left: 20px;
+  }
+  .reviews__list {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .reviews__item {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 620px;
+      margin: 0;
+      margin-top: 52px;
+      .reviews__author-name {
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        color: #000000;
+        margin-top: 20px;
+      }
+      .reviews__author-age {
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 2.14;
+        text-align: center;
+        color: #283645;
+        margin-top: 5px;
+      }
+      .reviews__text {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.67;
+        text-align: center;
+        color: #283645;
+        min-height: auto;
+      }
+
+    }
   }
 }

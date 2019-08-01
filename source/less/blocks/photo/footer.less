@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -32,5 +34,22 @@
     font-size: 14px;
     color: #283645;
     margin-right: 15px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .footer__footer {
+    width: 660px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .footer__logo {
+      margin-left: 20px;
+      margin-top: -10px;
+    }
+    .developed__wrapper {
+      margin-right: 20px;
+    }
   }
 }

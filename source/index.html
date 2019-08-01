@@ -19,16 +19,16 @@
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">Главная</a>
+            <a class="site-list__item-a" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
+            <a class="site-list__item-a" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+            <a class="site-list__item-a" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__item-a" href="#">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -39,30 +39,30 @@
 
     <div class="download__img"></div>
     <div class="download__wrapper">
-      <h1 class="download__headline">Взгляните на мир иначе!</h1>
-      <h2 class="download__button">Скачать приложение</h2>
-      <ul class="download__list">
-        <li class="download__item">
-          <a class="download__link download__link--ios" href="#"><img src="img/logo-apple.svg"></a>
-        </li>
-        <li class="download__item" href="#">
-          <a class="download__link download__link--Android" href="#"><img src="img/logo-android.svg"></a>
-        </li>
-        <li class="download__item" href="#">
-          <a class="download__link download__link--Windows" href="#"><img src="img/logo-microsoft.svg"></a>
-        </li>
-      </ul>
-      <p class="download__text">
-        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </p>
+      <div class="download__left-page">
+        <h1 class="download__headline">Взгляните на жизнь иначе!</h1>
+        <h2 class="download__button">Скачать приложение</h2>
+        <ul class="download__list">
+          <li class="download__item">
+            <a class="download__link download__link--ios" href="#"><img src="img/logo-apple.svg"></a>
+          </li>
+          <li class="download__item" href="#">
+            <a class="download__link download__link--Android" href="#"><img src="img/logo-android.svg"></a>
+          </li>
+          <li class="download__item" href="#">
+            <a class="download__link download__link--Windows" href="#"><img src="img/logo-microsoft.svg"></a>
+          </li>
+        </ul>
+        <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
     </div>
+
+    <!--<svg class="diagonal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="#f2f2f2" points="0,100 100,0 100,100"/>-->
+    <!--</svg>-->
 
     <div class="information__wrapper">
       <h2 class="information__headline">Устали от серости мегаполиса?</h2>
-      <h2 class="information__headline">Нам есть что вам предложить!</h2>
-      <svg class="diagonal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <polygon fill="#f2f2f2" points="0,100 100,0 100,100"/>
-      </svg>
+      <h2 class="information__headline">Нам есть что вам <br> предложить!</h2>
       <ul class="information__list">
         <li class="information__item">
           <h3 class="information__item-headline">Поднимает настроение</h3>
@@ -77,13 +77,11 @@
           <p class="information__item-p">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </li>
       </ul>
-      <img src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="screen">
     </div>
 
     <div class="reviews__wrapper slider">
       <div class="reviews__effect">
-        <img src="">
-        <h3 class="reviews__effect-headline">Эффект на 24 часа!</h3>
+        <h3 class="reviews__effect-headline">Эффект<br> на 24 часа!</h3>
         <p class="reviews__effect-p">Британские ученые провели исследования
           и доказали, что положительный эффект
           от использования приложения длится
@@ -93,6 +91,7 @@
       <h2 class="visually-hidden">Отзывы о нас</h2>
       <div class="reviews__list  slider__list">
         <blockquote class="reviews__item  slider__item">
+          <p class="reviews__author-age">25лет, водитель трамвая</p>
           <cite class="reviews__author-name">Николай Петров</cite>
           <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </blockquote>
@@ -105,15 +104,15 @@
     </div>
 
     <div class="price__wrapper slider">
-      <svg class="diagonal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <polygon fill="#f2f2f2" points="0,100 100,0 100,100"/>
-      </svg>
+      <!--<svg class="diagonal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">-->
+        <!--<polygon fill="#f2f2f2" points="0,100 100,0 100,100"/>-->
+      <!--</svg>-->
       <h2 class="visually-hidden">Наши цены</h2>
       <ul class="price__list slider__list">
         <li class="price__item price__item--base slider__item">
           <div class="price__header">
-            <h3 class="prise__name">База</h3>
-            <p class="prise__value">1,99 USD</p>
+            <h3 class="price__name">База</h3>
+            <p class="price__value">1,99 USD</p>
           </div>
           <ul class="price-tag__list">
             <li class="price-tag__item">Розовый фильтр</li>
@@ -123,8 +122,8 @@
         </li>
         <li class="price__item price__item--standard slider__item">
           <div class="price__header">
-            <h3 class="prise__name">Стандарт</h3>
-            <p class="prise__value">3,99 USD</p>
+            <h3 class="price__name">Стандарт</h3>
+            <p class="price__value">3,99 USD</p>
           </div>
           <ul class="price-tag__list">
             <li class="price-tag__item">Розовый фильтр</li>
@@ -134,8 +133,8 @@
         </li>
         <li class="price__item price__item--unlim slider__item">
           <div class="price__header">
-            <h3 class="prise__name">Анлим</h3>
-            <p class="prise__value">9,99 USD</p>
+            <h3 class="price__name">Анлим</h3>
+            <p class="price__value">9,99 USD</p>
           </div>
           <ul class="price-tag__list">
             <li class="price-tag__item">Розовый фильтр</li>
@@ -155,24 +154,45 @@
 
   <footer class="page-footer">
     <div class="page-footer__contacts contacts">
-      <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
-      <p class="contacts__title-list">Звоните:</p>
-      <p class="contacts__title-red">
-        <a class="contacts__phone" href="tel:+78125556666">
-        +7 (812) 555-66-66
-        </a>
-      </p>
-      <p class="contacts__title-list">Пишите:</p>
-      <p class="contacts__title-red">mail@htmlacademy.ru</p>
+      <p class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</p>
+      <div class="contacts__tablet-item">
+        <div class="contacts__left-page">
+          <p class="contacts__title-list">Звоните:</p>
+          <p class="contacts__title-red">
+            <a class="contacts__phone" href="tel:+78125556666">
+              +7 (812) 555-66-66
+            </a>
+          </p>
+        </div>
+        <div class="contacts__right-page">
+          <p class="contacts__title-list">Пишите:</p>
+          <p class="contacts__title-red">mail@htmlacademy.ru</p>
+        </div>
+      </div>
+
       <p class="contacts__title-list">Приезжайте в гости:</p>
-      <p class="contacts__title-red">ул. Большая Конюшенная 19/8</p>
+      <p class="contacts__title-red">ул. Большая<br> Конюшенная 19/8</p>
 
     </div>
-    <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <polygon fill="red" points="0,0 100,0 50,50">
-    </svg>
+    <!--<svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">-->
+      <!--<polygon fill="red" points="0,0 100,0 50,50">-->
+    <!--</svg>-->
     <div class="map__wrapper">
-      <img src="img/bg-map-mobile@1x.png" alt="map">
+      <iframe src="https://yandex.ru/map-widget/v1/-/CBFXQGSKCD" width="660" height="380" frameborder="0" allowfullscreen="true"></iframe>
+    </div>
+    <div class="footer__footer">
+      <a class="footer__logo">
+        <img class="header__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Pink">
+      </a>
+      <ul class="social__list">
+        <li class="social__item social__item--Twiter">Twiter</li>
+        <li class="social__item social__item--Facebook">Facebook</li>
+        <li class="social__item social__item--YouTube">YouTube</li>
+      </ul>
+      <div class="developed__wrapper">
+        <p class="developed__headline">Разработано</p>
+        <img src="img/logo-htmlacademy.svg" alt="HTMLacademy">
+      </div>
     </div>
   </footer>
   </body>
