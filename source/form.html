@@ -43,22 +43,20 @@
     <form class="form__registration" action="https://echo.htmlacademy.ru">
       <h2 class="form__headline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
       <div class="form__name">
-        <label class="form__name-label redcap" for="
-surname-label">Фамилия:
+        <label class="form__name-label redcap">Фамилия:
+          <input class="name-label__input" type="text" placeholder="Укажите фамилию*" name="Фамилия" required>
         </label>
-          <input class="name-label__input" id="
-surname-label" type="text" placeholder="Укажите фамилию*" name="Фамилия" required>
-        <label class="form__name-label redcap" for="name-label">Имя:
+        <label class="form__name-label redcap">Имя:
+          <input class="name-label__input" type="text" placeholder="Введите ваше имя*" name="Имя" required>
         </label>
-          <input class="name-label__input" id="name-label" type="text" placeholder="Введите ваше имя*" name="Имя" required>
-        <label class="form__name-label redcap" for="
-patronymic-label">Отчество:
+        <label class="form__name-label redcap">Отчество:
+          <input class="name-label__input" type="text" placeholder="Ну и отчество тоже" name="Отчество">
         </label>
           <input class="name-label__input" id="
 patronymic-label" type="text" placeholder="Ну и отчество тоже" name="Отчество">
       </div>
       <div class="form__progress progress">
-        <h3 class="progress__headline redcap">Ваши безбашенные <br>достижения в путешествии</h3>
+        <h3 class="progress__headline redcap">Ваши безбашенные достижения в путешествии</h3>
         <ul class="progress__list">
           <li class="progress__item">
             <input class="item-label__checkbox" type="checkbox" value="Сделал селфи с акулой" id="selfy-label">
@@ -93,12 +91,12 @@ patronymic-label" type="text" placeholder="Ну и отчество тоже" na
       </div>
 
       <div class="form__phone">
-        <label class="form__phone-label redcap" for="phone-label">Номер телефона:</label>
-        <input class="phone-label__input" type="tel" placeholder="Номер, пожалуйста" name="Номер телефона" id="phone-label">
-
-        <label class="form__phone-label redcap" for="email-label">Адрес почты:</label>
-          <input class="phone-label__input" type="email" placeholder="Введите почту*" name="Адрес почты" required id="email-label">
-
+        <label class="form__phone-label redcap">Номер телефона:
+          <input class="phone-label__input" type="tel" placeholder="Номер, пожалуйста" name="Номер телефона">
+        </label>
+        <label class="form__phone-label redcap">Адрес почты:
+          <input class="phone-label__input" type="email" placeholder="Введите почту*" name="Адрес почты" required>
+        </label>
       </div>
 
       <div class="form__app">
@@ -134,9 +132,10 @@ patronymic-label" type="text" placeholder="Ну и отчество тоже" na
     </form>
   </main>
 
-  <footer class="footer">
-    <a class="footer__logo">
-      <img class="header__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Pink">
+
+  <footer class="page-footer">
+    <a class="page-footer__logo">
+      <img class="page-header__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Pink">
     </a>
     <ul class="social__list">
       <li class="social__item social__item--Twiter">Twiter</li>
