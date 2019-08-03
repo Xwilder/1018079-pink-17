@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .upload__wrapper {
   display: flex;
   flex-direction: column;
@@ -28,22 +30,9 @@
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  .upload__tools-item--crop {
-    width: 48px;
-    height: 44px;
-    background: url("../img/icon-editor-crop.svg") no-repeat 100%;
-  }
-  .upload__tools-item--fill {
-    width: 48px;
-    height: 44px;
-    background: url("../img/icon-editor-fill.svg") no-repeat 100%;
-    margin: 0 32px;
-  }
-  .upload__tools-item--contrast {
-    width: 48px;
-    height: 44px;
-    background: url("../img/icon-editor-contrast.svg") no-repeat 100%;
-  }
+}
+.upload__tools-range-controls {
+  display: none;
 }
 
 .upload__range-controls {
@@ -85,4 +74,74 @@
     margin-bottom: 15px;
     margin-top: 40px;
   }
+}
+
+@media (min-width: @tablet-width) {
+  .upload__wrapper {
+    width: 700px;
+    .upload__headline {
+      margin-top: 47px;
+      margin-bottom: 69px;
+      width: 700px;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.67;
+    }
+    .upload__block {
+      width: 660px;
+      min-height: 511px;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+      margin-top: 0;
+    }
+    .upload__range-controls {
+      display: none;
+    }
+  }
+  .upload__tools-list {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    margin-right: 20px;
+    .upload__tools-range-controls {
+      position: relative;
+      height: 58px;
+      width: 240px;
+      border-radius: 5px;
+      overflow: hidden;
+      .upload__tools-scale {
+        margin-top: 23px;
+        height: 2px;
+        background: #d7dcde;
+      }
+      .upload__tools-toggle {
+        position: absolute;
+        top: 17px;
+        left: 190px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #d22856;
+        background: #ababab;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+    }
+  }
+  .upload__block::before {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 400px;
+    background: url("../img/photo-road-tablet@1x.jpg");
+    top: 55px;
+    left: 20px;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+
 }

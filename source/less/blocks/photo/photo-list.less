@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .photo__list {
   padding: 0;
 margin-top: 38px;
@@ -65,3 +67,47 @@ margin-top: 38px;
   }
 }
 
+@media (min-width: @tablet-width) {
+  .photo__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 640px;
+    margin-top: 30px;
+    margin-left: -20px;
+    .photo__item {
+      margin-top: 16px;
+      margin-left: 20px;
+      .photo__item-white {
+        min-height: 155px;
+      }
+    }
+  }
+  .photo__item-white {
+    width: 300px;
+    .photo__item--name {
+      margin-left: 27px;
+    }
+    .photo__item--comment {
+      margin-left: 27px;
+      text-align: left;
+    }
+    .photo__footer {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-left: 27px;
+      .photo__item--like-img {
+        margin-right: 30px;
+      }
+      .photo__item--like {
+        margin-left: 0px;
+      }
+    }
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+
+}

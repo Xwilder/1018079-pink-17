@@ -40,31 +40,36 @@
     <div class="user-photos">
       <div class="user-photos__head">
         <div class="user-photos__img"></div>
-        <h1 class="user-photos__headline">Фотографии пользователей</h1>
+        <h1 class="user-photos__headline">Фотографии<br> пользователей</h1>
       </div>
       <p class="user-photos__p">Взгляните на фотографии, которые выкладывают пользователи!
         <br>Видите, как не хватает ваших?</p>
+    <div class="user-photos__panorama">
+      <span class="photo__item--flag"></span>
+      <picture>
+        <source media="(min-width:1200px)" srcset="img/panorama-desktop@1x.jpg">
+        <source media="(min-width:768px)" srcset="img/panorama-tablet@1x.jpg">
+        <img class="photo__item--img" src="img/panorama-mobile@1x.jpg" alt="фотография пользователя">
+      </picture>
+      <div class="photo__item-white">
+        <div class="photo__user">
+          <b class="photo__item--name">Анна</b>
+          <p class="photo__item--time">(5 минут назад)</p>
+        </div>
+        <p class="photo__item--comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+        <div class="photo__footer">
+          <div class="photo__item--like-img"></div>
+          <div class="photo__item--like">нравится:215</div>
+        </div>
+      </div>
     </div>
-
     <ul class="photo__list">
       <li class="photo__item">
-        <span class="photo__item--flag"></span>
-        <img class="photo__item--img" src="img/panorama-mobile@1x.jpg" alt="фотография пользователя">
-        <div class="photo__item-white">
-          <div class="photo__user">
-            <b class="photo__item--name">Анна</b>
-            <p class="photo__item--time">(5 минут назад)</p>
-          </div>
-          <p class="photo__item--comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-          <div class="photo__footer">
-            <div class="photo__item--like-img"></div>
-            <div class="photo__item--like">нравится:215</div>
-          </div>
-        </div>
-      </li>
-
-      <li class="photo__item">
-        <img class="photo__item--img" src="img/photo-car-mobile@1x.jpg" alt="фотография пользователя">
+        <picture>
+          <source media="(min-width:1200px)" srcset="img/photo-car-desktop@1x.jpg">
+          <source media="(min-width:768px)" srcset="img/photo-car-tablet@1x.jpg">
+          <img class="photo__item--img" src="img/photo-car-mobile@1x.jpg" alt="фотография пользователя">
+        </picture>
         <div class="photo__item-white">
           <div class="photo__user">
             <b class="photo__item--name">Левон</b>
@@ -77,9 +82,12 @@
           </div>
         </div>
       </li>
-
       <li class="photo__item">
-        <img class="photo__item--img" src="img/photo-drumset-mobile@1x.jpg" alt="фотография пользователя">
+        <picture>
+          <source media="(min-width:1200px)" srcset="img/photo-drumset-desktop@1x.jpg">
+          <source media="(min-width:768px)" srcset="img/photo-drumset-tablet@1x.jpg">
+          <img class="photo__item--img" src="img/photo-drumset-mobile@1x.jpg" alt="фотография пользователя">
+        </picture>
         <div class="photo__item-white">
           <div class="photo__user">
             <b class="photo__item--name">Антон</b>
@@ -92,9 +100,12 @@
           </div>
         </div>
       </li>
-
       <li class="photo__item">
-        <img class="photo__item--img" src="img/photo-window-mobile@1x.jpg" alt="фотография пользователя">
+        <picture>
+          <source media="(min-width:1200px)" srcset="img/photo-window-desktop@1x.jpg">
+          <source media="(min-width:768px)" srcset="img/photo-window-tablet@1x.jpg">
+          <img class="photo__item--img" src="img/photo-window-mobile@1x.jpg" alt="фотография пользователя">
+        </picture>
         <div class="photo__item-white">
           <div class="photo__user">
             <b class="photo__item--name">Борис</b>
@@ -107,9 +118,12 @@
           </div>
         </div>
       </li>
-
       <li class="photo__item">
-        <img class="photo__item--img" src="img/photo-fair-mobile@1x.jpg" alt="фотография пользователя">
+        <picture>
+          <source media="(min-width:1200px)" srcset="img/photo-fair-desktop@1x.jpg">
+          <source media="(min-width:768px)" srcset="img/photo-fair-tablet@1x.jpg">
+          <img class="photo__item--img" src="img/photo-fair-mobile@1x.jpg" alt="фотография пользователя">
+        </picture>
         <div class="photo__item-white">
           <div class="photo__user">
             <b class="photo__item--name">Сергей</b>
@@ -122,9 +136,12 @@
           </div>
         </div>
       </li>
-
       <li class="photo__item">
-        <img class="photo__item--img" src="img/photo-pov-mobile@1x.jpg" alt="фотография пользователя">
+        <picture>
+          <source media="(min-width:1200px)" srcset="img/photo-pov-desktop@1x.jpg">
+          <source media="(min-width:768px)" srcset="img/photo-pov-tablet@1x.jpg">
+          <img class="photo__item--img" src="img/photo-pov-mobile@1x.jpg" alt="фотография пользователя">
+        </picture>
         <div class="photo__item-white">
           <div class="photo__user">
             <b class="photo__item--name">Максим</b>
@@ -138,7 +155,11 @@
         </div>
       </li>
       <li class="photo__item">
-        <img class="photo__item--img" src="img/photo-wing-mobile@1x.jpg" alt="фотография пользователя">
+        <picture>
+          <source media="(min-width:1200px)" srcset="img/photo-wing-desktop@1x.jpg">
+          <source media="(min-width:768px)" srcset="img/photo-wing-tablet@1x.jpg">
+          <img class="photo__item--img" src="img/photo-wing-mobile@1x.jpg" alt="фотография пользователя">
+        </picture>
         <div class="photo__item-white">
           <div class="photo__user">
             <b class="photo__item--name">Надежда</b>
@@ -152,15 +173,49 @@
         </div>
       </li>
     </ul>
-
+    </div>
     <div class="upload__wrapper">
       <h2 class="upload__headline">Затмите их всех! <br>Выкладывайте всё, что накопилось в телефоне!</h2>
       <div class="upload__block">
-        <img src="img/photo-road-mobile@1x.jpg" class="upload__block-img">
         <ul class="upload__tools-list">
-          <li class="upload__tools-item--crop"></li>
-          <li class="upload__tools-item--fill"></li>
-          <li class="upload__tools-item--contrast"></li>
+          <li class="upload__tools-item upload__tools-item--crop">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+  <path fill="none" d="M0,0h48v48H0V0z"/>
+  <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+</svg>
+            <div class="upload__tools-range-controls">
+              <div class="upload__tools-scale">
+                <div class="upload__bar"></div>
+              </div>
+              <div class="upload__tools-toggle"></div>
+            </div>
+          </li>
+          <li class="upload__tools-item upload__tools-item--fill">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+  <path fill="none" d="M0,0h48v48H0V0z"/>
+  <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+  <rect y="40" width="48" height="3"/>
+</svg>
+
+            <div class="upload__tools-range-controls">
+              <div class="upload__tools-scale">
+                <div class="upload__bar"></div>
+              </div>
+              <div class="upload__tools-toggle"></div>
+            </div>
+          </li>
+          <li class="upload__tools-item upload__tools-item--contrast">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+  <path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+  <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+</svg>
+            <div class="upload__tools-range-controls">
+              <div class="upload__tools-scale">
+                <div class="upload__bar"></div>
+              </div>
+              <div class="upload__tools-toggle"></div>
+            </div>
+          </li>
         </ul>
         <div class="upload__range-controls">
           <div class="upload__scale"><div class="upload__bar"></div></div>
