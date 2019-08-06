@@ -8,10 +8,15 @@
 </head>
 <body>
 
-  <header class="page-header">
+<header class="page-header">
+  <div class="page-header__nav">
     <div class="page-header__nav-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" alt="Pink">
+        <picture class="page-header__logo-picture">
+          <source media="(min-width:1200px)" srcset="img/logo-pink-white-desktop.svg">
+          <source media="(min-width:768px)" srcset="img/logo-pink-white-tablet.svg">
+          <img class="photo__item--img" src="img/logo-pink-white-mobile.svg" alt="фотография пользователя">
+        </picture>
       </a>
       <button class="main-nav__toggle" type="button"><img class="page-header__logo-image" src="img/icon-menu-burger.svg" alt="Pink"></button>
     </div>
@@ -19,21 +24,23 @@
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">Главная</a>
+            <a class="site-list__item-a" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a>Фотографии</a>
+            <a class="site-list__item-a" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+            <a class="site-list__item-a" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__item-a" href="#">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </div>
-  </header>
+  </div>
+
+</header>
 
   <main class="main-photo">
 
@@ -84,10 +91,10 @@
       </li>
       <li class="photo__item">
         <picture>
-          <source media="(min-width:1200px)" srcset="img/photo-drumset-desktop@1x.jpg">
-          <source media="(min-width:768px)" srcset="img/photo-drumset-tablet@1x.jpg">
-          <img class="photo__item--img" src="img/photo-drumset-mobile@1x.jpg" alt="фотография пользователя">
-        </picture>
+        <source media="(min-width:1200px)" srcset="img/photo-drumset-desktop@1x.jpg">
+        <source media="(min-width:768px)" srcset="img/photo-drumset-tablet@1x.jpg">
+        <img class="photo__item--img" src="img/photo-drumset-mobile@1x.jpg" alt="фотография пользователя">
+      </picture>
         <div class="photo__item-white">
           <div class="photo__user">
             <b class="photo__item--name">Антон</b>
@@ -231,17 +238,20 @@
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__logo">
-      <img class="page-header__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Pink">
-    </a>
-    <ul class="social__list">
-      <li class="social__item social__item--Twiter">Twiter</li>
-      <li class="social__item social__item--Facebook">Facebook</li>
-      <li class="social__item social__item--YouTube">YouTube</li>
-    </ul>
-    <div class="developed__wrapper">
-      <p class="developed__headline">Разработано</p>
-      <img src="img/logo-htmlacademy.svg" alt="HTMLacademy">
+    <div class="footer__footer">
+      <a class="footer__logo">
+        <img class="header__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Pink">
+      </a>
+      <ul class="social__list">
+        <li class="social__item social__item--Twiter">Twiter</li>
+        <li class="social__item social__item--Facebook">Facebook</li>
+        <li class="social__item social__item--YouTube">YouTube</li>
+      </ul>
+      <div class="developed__wrapper">
+        <p class="developed__headline">Разработано</p>
+        <img src="img/logo-htmlacademy.svg" alt="HTMLacademy">
+      </div>
+    </div>
   </footer>
 </body>
 </html>

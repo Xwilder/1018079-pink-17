@@ -9,30 +9,37 @@
   <body>
 
   <header class="page-header">
-    <div class="page-header__nav-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" alt="Pink">
-      </a>
-      <button class="main-nav__toggle" type="button"><img class="page-header__logo-image" src="img/icon-menu-burger.svg" alt="Pink"></button>
+    <div class="page-header__nav">
+      <div class="page-header__nav-header">
+        <a class="page-header__logo">
+          <picture class="page-header__logo-picture">
+            <source media="(min-width:1200px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width:768px)" srcset="img/logo-pink-white-tablet.svg">
+            <img class="photo__item--img" src="img/logo-pink-white-mobile.svg" alt="фотография пользователя">
+          </picture>
+        </a>
+        <button class="main-nav__toggle" type="button"><img class="page-header__logo-image" src="img/icon-menu-burger.svg" alt="Pink"></button>
+      </div>
+      <div class="main-nav__wrapper">
+        <nav class="main-nav">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__item-a" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-a" href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-a" href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-a" href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <div class="main-nav__wrapper">
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__item-a" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__item-a" href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__item-a" href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__item-a" href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+
   </header>
 
   <main class="main-index">
@@ -64,16 +71,29 @@
     <div class="information__wrapper">
       <h2 class="information__headline">Устали от серости мегаполиса?</h2>
       <h2 class="information__headline">Нам есть что вам <br> предложить!</h2>
+      <picture class="information__picture">
+        <source class="information__picture-source" media="(min-width:768px)" srcset="img/iphone-screen-3-tablet@1x.png">
+      </picture>
       <ul class="information__list">
         <li class="information__item">
+          <picture class="information__picture">
+            <source class="information__picture-source" media="(min-width:1200px)" srcset="img/iphone-screen-1-desktop@1x.png">
+          </picture>
           <h3 class="information__item-headline">Поднимает настроение</h3>
           <p class="information__item-p">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
         </li>
         <li class="information__item">
+          <picture class="information__picture">
+            <source media="(min-width:1200px)" srcset="img/iphone-screen-2-desktop@1x.png" sizes="(min-width:1200px) 186px">
+            <img src="img/iphone-screen-2-desktop@1x.png">
+          </picture>
           <h3 class="information__item-headline">Меняет мир вокруг</h3>
           <p class="information__item-p">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
         </li>
         <li class="information__item">
+          <picture class="information__picture">
+            <source class="information__picture-source" media="(min-width:1200px)" srcset="img/iphone-screen-3-desktop@1x.png">
+          </picture>
           <h3 class="information__item-headline">Заводит новых друзей</h3>
           <p class="information__item-p">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </li>
@@ -82,7 +102,7 @@
 
     <div class="reviews__wrapper slider">
       <div class="reviews__effect">
-        <h3 class="reviews__effect-headline">Эффект<br> на 24 часа!</h3>
+        <h3 class="reviews__effect-headline">Эффект на 24 часа!</h3>
         <p class="reviews__effect-p">Британские ученые провели исследования
           и доказали, что положительный эффект
           от использования приложения длится
@@ -156,30 +176,30 @@
   <footer class="page-footer">
     <div class="page-footer__contacts contacts">
       <p class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</p>
-      <div class="contacts__tablet-item">
-        <div class="contacts__left-page">
+      <ul class="contacts__list">
+        <li class="contacts__item">
           <p class="contacts__title-list">Звоните:</p>
           <p class="contacts__title-red">
             <a class="contacts__phone" href="tel:+78125556666">
               +7 (812) 555-66-66
             </a>
           </p>
-        </div>
-        <div class="contacts__right-page">
+        </li>
+        <li class="contacts__item">
           <p class="contacts__title-list">Пишите:</p>
           <p class="contacts__title-red">mail@htmlacademy.ru</p>
-        </div>
-      </div>
-
-      <p class="contacts__title-list">Приезжайте в гости:</p>
-      <p class="contacts__title-red">ул. Большая<br> Конюшенная 19/8</p>
-
+        </li>
+        <li class="contacts__item">
+          <p class="contacts__title-list">Приезжайте в гости:</p>
+          <p class="contacts__title-red">ул. Большая<br> Конюшенная 19/8</p>
+        </li>
+      </ul>
     </div>
     <!--<svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">-->
       <!--<polygon fill="red" points="0,0 100,0 50,50">-->
     <!--</svg>-->
     <div class="map__wrapper">
-      <iframe src="https://yandex.ru/map-widget/v1/-/CBFXQGSKCD" width="660" height="380" frameborder="0" allowfullscreen="true"></iframe>
+      <iframe class="map__map" src="https://yandex.ru/map-widget/v1/-/CBFXQGSKCD" width="320" height="200" frameborder="0" allowfullscreen="true"></iframe>
     </div>
     <div class="footer__footer">
       <a class="footer__logo">

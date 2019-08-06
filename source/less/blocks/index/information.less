@@ -41,7 +41,7 @@
 
 @media (min-width: @tablet-width) {
   .information__wrapper {
-    max-height: 790px;
+    min-height: 790px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -72,15 +72,63 @@
     line-height: 1.71;
 
   }
+}
 
-  .information__list::after {
-    position: absolute;
-    content: "";
-    top: -65px;
-    right: 340px;
-    width: 268px;
-    min-height: 544px;
-    background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat 100%;
+@media (min-width: @desktop-width) {
+  .information__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    .information__headline{
+      font-size: 50px;
+      font-weight: 300;
+      width: 1200px;
+    }
+    .information__headline:first-child {
+      margin-top: 70px;
+    }
+    .information__headline:last-of-type {
+      margin-top: 0;
+    }
+    .information__list {
+      display: flex;
+      flex-direction: row;
+      margin-left: 0;
+    }
+    .information__item {
+      width: 236px;
+      margin-right: 90px;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .information__item:last-of-type {
+      margin-right: 0;
+    }
+
   }
-
+  .information__item {
+    .information__picture {
+      display: block;
+      width: 186px;
+      height: 380px;
+      .information__picture-source {
+        display: block;
+        width: 186px;
+        height: 380px;
+      }
+    }
+     .information__item-headline {
+       font-size: 30px;
+       line-height: 1.67;
+       text-align: center;
+     }
+    .information__item-p {
+      font-size: 18px;
+      line-height: 1.67;
+      text-align: center;
+    }
+   }
 }
