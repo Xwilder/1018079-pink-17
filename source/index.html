@@ -3,8 +3,8 @@
   <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
   </head>
   <body>
 
@@ -49,66 +49,64 @@
     <div class="download__wrapper">
       <div class="download__left-page">
         <h1 class="download__headline">Взгляните на жизнь иначе!</h1>
-        <h2 class="download__button">Скачать приложение</h2>
+        <a href="#" class="download__button">Скачать приложение</a>
         <ul class="download__list">
           <li class="download__item">
-            <a class="download__link download__link--ios" href="#"><img src="img/logo-apple.svg"></a>
+            <a class="download__link download__link--ios" href="#">
+              <img lass="download__img-ios"src="img/logo-apple.svg">
+            </a>
           </li>
           <li class="download__item" href="#">
-            <a class="download__link download__link--Android" href="#"><img src="img/logo-android.svg"></a>
+            <a class="download__link download__link--Android" href="#">
+              <img class="download__img-Android" src="img/logo-android.svg">
+            </a>
           </li>
           <li class="download__item" href="#">
-            <a class="download__link download__link--Windows" href="#"><img src="img/logo-microsoft.svg"></a>
+            <a class="download__link download__link--Windows" href="#">
+              <img class="download__img-Windows" src="img/logo-microsoft.svg">
+            </a>
           </li>
         </ul>
         <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
     </div>
 
-    <!--<svg class="diagonal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="#f2f2f2" points="0,100 100,0 100,100"/>-->
-    <!--</svg>-->
-
     <div class="information__wrapper">
-      <h2 class="information__headline">Устали от серости мегаполиса?</h2>
-      <h2 class="information__headline">Нам есть что вам <br> предложить!</h2>
-      <picture class="information__picture">
-        <source class="information__picture-source" media="(min-width:768px)" srcset="img/iphone-screen-3-tablet@1x.png">
-      </picture>
-      <ul class="information__list">
-        <li class="information__item">
-          <picture class="information__picture">
-            <source class="information__picture-source" media="(min-width:1200px)" srcset="img/iphone-screen-1-desktop@1x.png">
-          </picture>
-          <h3 class="information__item-headline">Поднимает настроение</h3>
-          <p class="information__item-p">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-        </li>
-        <li class="information__item">
-          <picture class="information__picture">
-            <source media="(min-width:1200px)" srcset="img/iphone-screen-2-desktop@1x.png" sizes="(min-width:1200px) 186px">
-            <img src="img/iphone-screen-2-desktop@1x.png">
-          </picture>
-          <h3 class="information__item-headline">Меняет мир вокруг</h3>
-          <p class="information__item-p">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </li>
-        <li class="information__item">
-          <picture class="information__picture">
-            <source class="information__picture-source" media="(min-width:1200px)" srcset="img/iphone-screen-3-desktop@1x.png">
-          </picture>
-          <h3 class="information__item-headline">Заводит новых друзей</h3>
-          <p class="information__item-p">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-        </li>
-      </ul>
+      <div class="information__headline-list">
+        <h2 class="information__headline">Устали от серости мегаполиса?</h2>
+        <h2 class="information__headline">Нам есть, что вам <br> предложить!</h2>
+      </div>
+      <div class="information__list-block">
+        <ul class="information__list">
+          <li class="information__item">
+            <h3 class="information__item-headline">Поднимает настроение</h3>
+            <p class="information__item-p">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="information__item">
+            <h3 class="information__item-headline">Меняет мир вокруг</h3>
+            <p class="information__item-p">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="information__item">
+            <h3 class="information__item-headline">Заводит новых друзей</h3>
+            <p class="information__item-p">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </div>
+
     </div>
 
     <div class="reviews__wrapper slider">
-      <div class="reviews__effect">
-        <h3 class="reviews__effect-headline">Эффект на 24 часа!</h3>
-        <p class="reviews__effect-p">Британские ученые провели исследования
-          и доказали, что положительный эффект
-          от использования приложения длится
-          целые сутки!</p>
-        <a class="reviews__effect-a">Узнать больше об исследовании</a>
+      <div class="reviews__effect-block">
+        <div class="reviews__effect">
+          <h3 class="reviews__effect-headline">Эффект на 24 часа!</h3>
+          <p class="reviews__effect-p">Британские ученые провели исследования
+            и доказали, что положительный эффект
+            от использования приложения длится
+            целые сутки!</p>
+          <a class="reviews__effect-a">Узнать больше об исследовании</a>
+        </div>
       </div>
+
       <h2 class="visually-hidden">Отзывы о нас</h2>
       <div class="reviews__list  slider__list">
         <blockquote class="reviews__item  slider__item">
@@ -125,20 +123,49 @@
     </div>
 
     <div class="price__wrapper slider">
-      <!--<svg class="diagonal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">-->
-        <!--<polygon fill="#f2f2f2" points="0,100 100,0 100,100"/>-->
-      <!--</svg>-->
       <h2 class="visually-hidden">Наши цены</h2>
       <ul class="price__list slider__list">
+        <li class="price__item price__item--none slider__item">
+          <div class="price__header"></div>
+          <ul class="price-tag__list">
+            <li class="price-tag__item">Розовый фильтр</li>
+            <li class="price-tag__item">Смайлики</li>
+            <li class="price-tag__item">Комментарии</li>
+          </ul>
+        </li>
         <li class="price__item price__item--base slider__item">
           <div class="price__header">
             <h3 class="price__name">База</h3>
             <p class="price__value">1,99 USD</p>
           </div>
           <ul class="price-tag__list">
-            <li class="price-tag__item">Розовый фильтр</li>
-            <li class="price-tag__item">Смайлики</li>
-            <li class="price-tag__item">Комментарии</li>
+            <li class="price-tag__item">
+              <div class="price__mobile">
+                <p class="price__mobile-headline">Розовый фильтр</p>
+                <span class="price__desktop-cheked">
+                </span>
+              </div>
+              <span class="price__desktop-cheked">
+              </span>
+            </li>
+            <li class="price-tag__item">
+              <div class="price__mobile">
+                <p class="price__mobile-headline">Смайлики</p>
+                <span class="price__desktop-nocheked">
+                </span>
+              </div>
+              <span class="price__desktop-nocheked">
+              </span>
+            </li>
+            <li class="price-tag__item">
+              <div class="price__mobile">
+                <p class="price__mobile-headline">Комментарии</p>
+                <span class="price__desktop-nocheked">
+                </span>
+              </div>
+              <span class="price__desktop-nocheked">
+              </span>
+            </li>
           </ul>
         </li>
         <li class="price__item price__item--standard slider__item">
@@ -147,9 +174,33 @@
             <p class="price__value">3,99 USD</p>
           </div>
           <ul class="price-tag__list">
-            <li class="price-tag__item">Розовый фильтр</li>
-            <li class="price-tag__item">Смайлики</li>
-            <li class="price-tag__item">Комментарии</li>
+            <li class="price-tag__item">
+              <div class="price__mobile">
+                <p class="price__mobile-headline">Розовый фильтр</p>
+                <span class="price__desktop-cheked">
+                </span>
+              </div>
+              <span class="price__desktop-cheked">
+              </span>
+            </li>
+            <li class="price-tag__item">
+              <div class="price__mobile">
+                <p class="price__mobile-headline">Смайлики</p>
+                <span class="price__desktop-cheked">
+                </span>
+              </div>
+              <span class="price__desktop-cheked">
+              </span>
+            </li>
+            <li class="price-tag__item">
+              <div class="price__mobile">
+                <p class="price__mobile-headline">Комментарии</p>
+                <span class="price__desktop-nocheked">
+                </span>
+              </div>
+              <span class="price__desktop-nocheked">
+              </span>
+            </li>
           </ul>
         </li>
         <li class="price__item price__item--unlim slider__item">
@@ -158,9 +209,33 @@
             <p class="price__value">9,99 USD</p>
           </div>
           <ul class="price-tag__list">
-            <li class="price-tag__item">Розовый фильтр</li>
-            <li class="price-tag__item">Смайлики</li>
-            <li class="price-tag__item">Комментарии</li>
+            <li class="price-tag__item">
+              <div class="price__mobile">
+                <p class="price__mobile-headline">Розовый фильтр</p>
+                <span class="price__desktop-cheked">
+                </span>
+              </div>
+              <span class="price__desktop-cheked">
+              </span>
+            </li>
+            <li class="price-tag__item">
+              <div class="price__mobile">
+                <p class="price__mobile-headline">Смайлики</p>
+                <span class="price__desktop-cheked">
+                </span>
+              </div>
+              <span class="price__desktop-cheked">
+              </span>
+            </li>
+            <li class="price-tag__item">
+              <div class="price__mobile">
+                <p class="price__mobile-headline">Комментарии</p>
+                <span class="price__desktop-cheked">
+                </span>
+              </div>
+              <span class="price__desktop-cheked">
+              </span>
+            </li>
           </ul>
         </li>
       </ul>
@@ -195,9 +270,6 @@
         </li>
       </ul>
     </div>
-    <!--<svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">-->
-      <!--<polygon fill="red" points="0,0 100,0 50,50">-->
-    <!--</svg>-->
     <div class="map__wrapper">
       <iframe class="map__map" src="https://yandex.ru/map-widget/v1/-/CBFXQGSKCD" width="320" height="200" frameborder="0" allowfullscreen="true"></iframe>
     </div>
