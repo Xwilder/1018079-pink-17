@@ -4,7 +4,7 @@
   min-height: 437px;
   background-color: #f2f2f2;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   width: 320px;
   margin-top: 55px;
   .diagonal {
@@ -53,6 +53,7 @@
     background: #ffffff;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -69,41 +70,33 @@
     border-radius: 50%;
   }
 }
- .price__desktop-cheked {
-   display: none;
- }
-  .price__desktop-nocheked {
-    display: none;
-  }
 
-  .price__mobile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-size: 14px;
-    width: 100%;
-    .price__mobile-headline {
-      margin-left: 22px;
-    }
-    .price__desktop-cheked {
-      display: block;
-      width: 31px;
-      height: 21px;
-      background: url("../img/icon-yes.svg") no-repeat 100%;
-      background-size: 100%;
-      margin-right: 17px;
-    }
-    .price__desktop-nocheked {
-      display: block;
-      width: 27px;
-      height: 27px;
-      background: url("../img/icon-no.svg") no-repeat 100%;
-      margin-right: 19px;
-    }
-
-  }
+.price__mobile-headline {
+  margin-left: 22px;
+}
+.price__cheked {
+  fill: #2aab6d;
+  width: 31px;
+  height: 21px;
+}
+.price__nocheked {
+  fill: #d22856;
+  width: 27px;
+  height: 27px;
+}
+.price__desktop-cheked {
+  display: block;
+  width: 31px;
+  height: 21px;
+  background-size: 100%;
+  margin-right: 17px;
+}
+.price__desktop-nocheked {
+  display: block;
+  width: 27px;
+  height: 27px;
+  margin-right: 19px;
+}
 
 @media (min-width: @tablet-width) {
   .price__wrapper {
@@ -148,7 +141,7 @@
       width: 152px;
       min-height: 47px;
     }
-    .price__mobile {
+    .price__mobile-headline {
       display: none;
     }
   }
@@ -158,10 +151,22 @@
       border: none;
     }
   }
+
+
+
   .price__desktop-cheked {
+    display: block;
+    width: 31px;
+    height: 21px;
+    background-size: 100%;
+    margin-right: 17px;
     margin-left: 70px;
   }
   .price__desktop-nocheked {
+    display: block;
+    width: 27px;
+    height: 27px;
+    margin-right: 19px;
     margin-left: 70px;
   }
 }
@@ -193,23 +198,8 @@
       border: none;
     }
   }
-  .price__mobile {
+  .price__mobile-headline {
     display: none;
   }
 
-  //.price__desktop-cheked {
-  //  display: block;
-  //  width: 31px;
-  //  height: 21px;
-  //  background: url("../img/icon-yes.svg") no-repeat 100%;
-  //  background-size: 100%;
-  //  margin-left: 100px;
-  //}
-  //.price__desktop-nocheked {
-  //  display: block;
-  //  width: 27px;
-  //  height: 27px;
-  //  background: url("../img/icon-no.svg") no-repeat 100%;
-  //  margin-left: 100px;
-  //}
 }
