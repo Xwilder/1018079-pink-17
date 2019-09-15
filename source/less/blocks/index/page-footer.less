@@ -81,6 +81,9 @@
 .footer__footer {
   display: none;
 }
+.map__map {
+  margin-top: 2px;
+}
 
 @media (min-width: @tablet-width) {
   .page-footer__contacts {
@@ -180,15 +183,15 @@
     position:relative;
     height:502px;
     margin-top: 0px;
+    .map__map {
+      left:0;
+      top:0;
+      height:502px;
+      width:100%;
+      position:absolute;
+    }
+  }
 
-  }
-  .map__map {
-    left:0;
-    top:0;
-    height:502px;
-    width:100%;
-    position:absolute;
-  }
   .map__wrapper:before {
     border-top-width: 105px;
   }
