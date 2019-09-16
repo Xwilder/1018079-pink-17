@@ -12,16 +12,28 @@
 }
 
 .headline__item {
+  font-family: "Open Sans", sans-serif;
   max-width: 280px;
   text-align: center;
   font-size: 24px;
   font-weight: 300;
-  //color: #ffffff;
+  color: #ffffff;
   margin-top: 105px;
 }
 
 @media (min-width: @tablet-width) {
-
+  .headline__wrapper {
+    background: url("../img/bg-back-tablet.jpg") no-repeat 100%;
+    min-height: 729px;
+    background-position: center;
+    margin-top: -116px;
+  }
+  .headline__item {
+    max-width: 475px;
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 185px;
+  }
 }
 
 @media (min-width: @desktop-width) {
