@@ -6,6 +6,7 @@
   align-items: flex-start;
   max-width: 280px;
   .form__name-label {
+    width: 100%;
     font-size: 14px;
     line-height: 2.14;
     padding-left: 20px;
@@ -17,7 +18,7 @@
   }
   .name-label__input {
     width: 276px;
-    height: 59px;
+    height: 57px;
     border: solid 2px #e5e5e5;
   }
   .name-label__input:last-of-type {
@@ -30,8 +31,35 @@
     padding-left: 20px;
   }
 }
+.redcap {
+  text-transform: uppercase;
+  color: #d22856;
+}
 
 @media (min-width: @tablet-width) {
+  .form__name {
+    max-width: 660px;
+    order: 2;
+    .form__name-label{
+      width: 660px;
+    }
+    .name-label__input {
+      margin-left: 15px;
+    }
+    .form__name-label:first-of-type {
+      margin-top: 56px;
+    }
+    .name-label__input:last-of-type {
+      margin-bottom: 30px;
+    }
+    .name-label__surname,
+    .name-label__patronymic {
+      width: 521px;
+    }
+    .name-label__name {
+      width: 561px;
+    }
+  }
 
 }
 
