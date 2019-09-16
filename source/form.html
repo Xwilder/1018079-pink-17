@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 </head>
 <body>
 
@@ -47,22 +47,22 @@
       <h1 class="headline__item">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </div>
     <form class="form__registration" action="https://echo.htmlacademy.ru">
-      <h2 class="form__headline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
+      <h2 class="form__headline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <span class="form__headline-in">Пожалуйста, заполните форму ниже:</span>
+      </h2>
       <div class="form__name">
         <label class="form__name-label redcap">Фамилия:
-          <input class="name-label__input" type="text" placeholder="Укажите фамилию*" name="Фамилия" required>
+          <input class="name-label__input name-label__surname" type="text" placeholder="Укажите фамилию*" name="Фамилия" required>
         </label>
         <label class="form__name-label redcap">Имя:
-          <input class="name-label__input" type="text" placeholder="Введите ваше имя*" name="Имя" required>
+          <input class="name-label__input name-label__name" type="text" placeholder="Введите ваше имя*" name="Имя" required>
         </label>
         <label class="form__name-label redcap">Отчество:
-          <input class="name-label__input" type="text" placeholder="Ну и отчество тоже" name="Отчество">
+          <input class="name-label__input name-label__patronymic" type="text" placeholder="Ну и отчество тоже" name="Отчество">
         </label>
-          <input class="name-label__input" id="
-patronymic-label" type="text" placeholder="Ну и отчество тоже" name="Отчество">
       </div>
-      <div class="form__progress progress">
-        <h3 class="progress__headline redcap">Ваши безбашенные достижения в путешествии</h3>
+      <fieldset class="form__progress progress">
+        <legend class="progress__headline redcap">Ваши безбашенные достижения в путешествии</legend>
         <ul class="progress__list">
           <li class="progress__item">
             <input class="item-label__checkbox" type="checkbox" value="Сделал селфи с акулой" id="selfy-label">
@@ -94,19 +94,20 @@ patronymic-label" type="text" placeholder="Ну и отчество тоже" na
             </label>
           </li>
         </ul>
-      </div>
+      </fieldset>
 
-      <div class="form__phone">
+      <fieldset class="form__phone">
+        <legend class="form__phone-legend redcap">Контактная информация</legend>
         <label class="form__phone-label redcap">Номер телефона:
           <input class="phone-label__input" type="tel" placeholder="Номер, пожалуйста" name="Номер телефона">
         </label>
         <label class="form__phone-label redcap">Адрес почты:
           <input class="phone-label__input" type="email" placeholder="Введите почту*" name="Адрес почты" required>
         </label>
-      </div>
+      </fieldset>
 
-      <div class="form__app">
-        <h3 class="form__app-headline redcap">С каким приложением путешествовали?</h3>
+      <fieldset class="form__app">
+        <legend class="form__app-headline redcap">С каким приложением путешествовали?</legend>
         <ul class="app__list">
           <li class="app__item">
             <input class="item-label__radio" type="radio" name="app" value="Pink для iOS" id="ios-label">
@@ -124,12 +125,12 @@ patronymic-label" type="text" placeholder="Ну и отчество тоже" na
             </label>
           </li>
         </ul>
-      </div>
+      </fieldset>
 
-      <div class="form__emotions">
-        <h3 class="form__emotions-headline redcap">Опишите свои эмоции</h3>
+      <fieldset class="form__emotions">
+        <legend class="form__emotions-headline redcap">Опишите свои эмоции</legend>
         <textarea class="form__emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях" name="emotions"></textarea>
-      </div>
+      </fieldset>
 
       <button type="submit" class="form__button">Отправить форму</button>
 
