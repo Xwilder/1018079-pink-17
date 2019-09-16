@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 280px;
+  width: 280px;
 }
 
 .form__phone-label {
@@ -39,7 +39,17 @@
 
 @media (min-width: @tablet-width) {
   .form__phone {
-   order: 4;
+    order: 4;
+    padding: 0;
+    width: 616px;
+    border: solid 2px #e5e5e5;
+    margin-top: 57px;
+    height: 314px;
+  }
+  .form__phone-legend {
+    text-align: center;
+    width: 260px;
+    font-size: 14px;
   }
 }
 
