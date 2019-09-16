@@ -1,0 +1,122 @@
+@import "../../variables";
+
+.user-photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .user-photos__img {
+    background: url("../img/bg-back-mobile.jpg") no-repeat 100%;
+    min-height: 465px;
+    background-size: cover;
+    background-position: center;
+    margin-top: -69px;
+  }
+  .user-photos__headline {
+    width: 280px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-top: -365px;
+  }
+  .user-photos__p {
+    width: 280px;
+    font-size: 14px;
+    line-height: 2.14;
+    color: #283645;
+    margin-top: 115px;
+  }
+
+}
+
+@media (min-width: @tablet-width) {
+  .user-photos {
+    .user-photos__img {
+      background: url("../img/bg-back-tablet.jpg") no-repeat 100%;
+      min-height: 729px;
+      background-size: cover;
+      background-position: center;
+      margin-top: -110px;
+    }
+    .user-photos__headline {
+      width: 660px;
+      font-size: 50px;
+      margin-top: -545px;
+    }
+    .user-photos__p {
+      width: 660px;
+      color: #283645;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.67;
+      background-color: white;
+      padding-top: 93px;
+      padding-bottom: 75px;
+      margin-top: 107px;
+    }
+  }
+  .user-photos__panorama {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin-top: -19px;
+    .photo__item-white {
+      width: 620px;
+      position: relative;
+      min-height: 121px;
+    }
+    .photo__item--name {
+      margin-left: 28px;
+    }
+    .photo__item--comment {
+      text-align: left;
+      margin-left: 28px;
+      width: 510px;
+    }
+    .photo__footer {
+      display: flex;
+      flex-direction: row-reverse;
+      color: #d22856;
+      text-transform: uppercase;
+      font-size: 12px;
+      position: absolute;
+      top: 13px;
+      right: 28px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-photos {
+    .user-photos__head {
+      width: 1200px;
+    }
+    .user-photos__p {
+      margin-top: 70px;
+      padding-bottom: 87px;
+      width: 100%;
+    }
+  }
+  .user-photos__head {
+    .user-photos__img {
+      background: url("../img/bg-back-desktop.jpg") no-repeat 100%;
+      min-height: 853px;
+      background-size: cover;
+      background-position: center;
+      margin-top: -110px;
+    }
+    .user-photos__headline {
+      width: 100%;
+      margin-top: -675px;
+    }
+  }
+  .user-photos__panorama {
+    .photo__item-white {
+      width: 940px;
+      min-height: 96px;
+    }
+    .photo__item--comment {
+      width: 910px;
+    }
+  }
+}

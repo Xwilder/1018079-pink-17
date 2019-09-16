@@ -1,0 +1,121 @@
+@import "../../variables";
+
+.photo__list {
+  padding: 0;
+margin-top: 38px;
+}
+
+.photo__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.photo__item:not(:first-child) {
+  margin-top: 18px;
+}
+
+.photo__item-white {
+  width: 280px;
+  min-height: 121px;
+  background-color: #f2f2f2;
+
+}
+
+.photo__user {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 19px;
+  font-size: 14px;
+  line-height: 24px;
+  .photo__item--name {
+    margin-left: 17px;
+    margin-right: 4px;
+  }
+  .photo__item--time {
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+.photo__item--comment {
+  margin: 0 0 0 17px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.photo__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 15px 0 27px 17px;
+  .photo__item--like-img {
+    width: 13px;
+    height: 12px;
+    fill: #d22856;
+    background: url("../img/icon-heart.svg") no-repeat 100%;
+  }
+  .photo__item--like {
+    margin: 0;
+    margin-left: 19px;
+    color: #d22856;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .photo__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 640px;
+    margin-top: 30px;
+    margin-left: -20px;
+    .photo__item {
+      margin-top: 16px;
+      margin-left: 20px;
+      .photo__item-white {
+        min-height: 155px;
+      }
+    }
+  }
+  .photo__item-white {
+    width: 300px;
+    .photo__item--name {
+      margin-left: 27px;
+    }
+    .photo__item--comment {
+      margin-left: 27px;
+      text-align: left;
+    }
+    .photo__footer {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-left: 27px;
+      .photo__item--like-img {
+        margin-right: 30px;
+      }
+      .photo__item--like {
+        margin-left: 0px;
+      }
+    }
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .photo__list {
+    width: 960px;
+    .photo__item {
+      margin-bottom: 32px;
+    }
+    .photo__item--comment {
+      width: 250px;
+    }
+  }
+}

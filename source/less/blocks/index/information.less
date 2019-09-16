@@ -1,0 +1,208 @@
+@import "../../variables";
+
+.information__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 320px;
+  overflow: hidden;
+  .information__headline {
+    font-weight: 300;
+    width: 280px;
+    text-align: center;
+    &:first-child {
+      margin-top: 46px;
+    }
+    &:last-of-type {
+      margin-top: 32px;
+    }
+  }
+  .information__headline-list {
+    position: relative;
+
+  }
+  .information__headline-list:after {
+    position: absolute;
+    content: "";
+    bottom: -45px;
+    left: 0;
+    border-right: 100vw solid #f2f2f2;
+    border-top: 8vw solid transparent;
+    z-index: -1;
+  }
+
+  .diagonal {
+    position: absolute;
+    top: 215px;
+    width: 100%;
+    height: 10vw;
+  }
+
+  .information__list-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    height: 755px;
+    margin-top: 45px;
+    width: 100%;
+  }
+}
+.information__list {
+  min-height: 460px;
+  padding: 0;
+  margin: 0;
+  margin-top: 19px;
+  .information__item {
+    margin-top: 34px;
+    width: 280px;
+    text-align: center;
+  }
+  .information__item-headline {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .information__item-p{
+    font-size: 14px;
+    line-height: 1.71;
+    color: #283645;
+  }
+}
+
+
+
+@media (min-width: @tablet-width) {
+  .information__wrapper {
+    min-height: 730px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 660px;
+    .information__headline {
+      margin: 0;
+      width: 660px;
+      font-size: 40px;
+      font-weight: 300;
+    }
+    .information__item {
+      text-align: left;
+      width: 300px;
+      margin-top: 40px;
+    }
+    .information__list {
+       position: relative;
+       margin-left: 300px;
+       margin-top: -20px;
+       min-height: 450px;
+     }
+    .information__list:before {
+
+    }
+    .information__headline-list:after {
+      bottom: -100px;
+    }
+    .information__list-block {
+      margin-top: 100px;
+      height: auto;
+    }
+  }
+  .information__item-headline {
+    margin: 0;
+  }
+  .information__item-p {
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 1.71;
+
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .information__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    width: 1200px;
+    .information__headline{
+      font-size: 50px;
+      width: 1200px;
+    }
+    .information__headline-list:after {
+      bottom: -177px;
+    }
+    .information__headline:first-child {
+      margin-top: 70px;
+    }
+    .information__headline:last-of-type {
+      margin-top: 3px;
+    }
+
+    .information__list-block {
+      background-color: #f2f2f2;
+      height: 510px;
+      margin-top: 177px;
+      width: 1200px;
+    }
+    .information__list {
+      display: flex;
+      flex-direction: row;
+      margin-left: 0;
+      margin-top: 260px;
+      min-height: auto;
+    }
+    .information__item {
+      width: 236px;
+      margin-right: 90px;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .information__item:last-of-type {
+      margin-right: 0;
+    }
+
+  }
+  .information__item {
+   .information__item-headline {
+     font-size: 30px;
+     font-weight: bold;
+     text-align: center;
+   }
+  .information__item-p {
+    font-size: 18px;
+    line-height: 1.67;
+    text-align: center;
+  }
+ }
+  .information__item {
+    .information__item-headline::after {
+      display: block;
+      width: 300px;
+      height: 379px;
+      content: "";
+      position: absolute;
+      top: -355px;
+      left: -20px;
+    }
+  }
+  .information__item:nth-child(1) {
+     .information__item-headline::after {
+       background: url(../img/iphone-screen-1-desktop@1x.png) no-repeat;
+     }
+   }
+  .information__item:nth-child(2) {
+    .information__item-headline::after {
+      background: url(../img/iphone-screen-2-desktop@1x.png) no-repeat;
+    }
+  }
+  .information__item:nth-child(3) {
+    .information__item-headline::after {
+      background: url(../img/iphone-screen-3-desktop@1x.png) no-repeat;
+    }
+  }
+
+}

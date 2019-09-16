@@ -1,0 +1,205 @@
+@import "../../variables";
+
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  //margin-top: -40px;
+}
+
+.reviews__effect {
+  display: none;
+}
+.reviews__list {
+  position: relative;
+}
+
+.reviews__list:after {
+  position: absolute;
+  content: "";
+  bottom: -105px;
+  left: 0;
+  border-right: 100vw solid #f2f2f2;
+  border-top: 8vw solid transparent;
+  z-index: -1;
+}
+
+.reviews__item {
+  width: 280px;
+  text-align: center;
+  margin-top: 40px;
+  .reviews__text {
+    margin-top: 15px;
+    min-height: 165px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+  .reviews__author-age {
+    display: none;
+  }
+  .reviews__author-name {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.67;
+  }
+}
+
+.reviews__toggles {
+  width: 280px;
+  text-align: center;
+  .slider__toggle {
+    background: none;
+    padding: 0;
+    width: 6px;
+    height: 6px;
+    border: solid 3px #283645;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__wrapper {
+    margin-top: 0;
+    width: 660px;
+    position: relative;
+  }
+  .reviews__effect {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    min-height: 300px;
+    margin-top: 65px;
+    margin-left: 300px;
+    .reviews__effect-headline {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 0;
+      width: 170px;
+    }
+    .reviews__effect-p {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.71;
+      text-align: left;
+      color: #283645;
+    }
+    .reviews__effect-a {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.71;
+      text-align: left;
+      color: #d22856;
+    }
+  }
+  .reviews__wrapper::after {
+    width: 238px;
+    height: 276px;
+    position: absolute;
+    content: "";
+    background: url("../img/research-bgr.svg") no-repeat;
+    background-size: 100%;
+    top: 57px;
+    left: 20px;
+  }
+  .reviews__list {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reviews__item {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 620px;
+    margin: 0;
+    margin-top: 52px;
+    .reviews__author-name {
+      font-size: 20px;
+      font-weight: bold;
+      font-style: normal;
+      color: #000000;
+      margin-top: 20px;
+    }
+    .reviews__author-age {
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 2.14;
+      text-align: center;
+      color: #283645;
+      margin-top: 5px;
+    }
+    .reviews__text {
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.67;
+      text-align: center;
+      color: #283645;
+      min-height: auto;
+    }
+
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews__wrapper {
+    width: 1200px;
+    .reviews__effect-block {
+      width: 100%;
+      background-color: #f2f2f2;
+    }
+    .reviews__effect {
+      width: 525px;
+      margin-left: 500px;
+      margin-top: 90px;
+      min-height: 342px;
+      .reviews__effect-headline {
+        margin-top: 25px;
+      }
+      .reviews__effect-p {
+        font-size: 18px;
+        line-height: 1.67;
+        margin-bottom: 30px;
+      }
+      .reviews__effect-a {
+        font-size: 18px;
+      }
+    }
+    .reviews__list {
+      width: 1200px;
+      .reviews__item {
+        width: 685px;
+        margin-top: 170px;
+      }
+    }
+    .reviews__toggles {
+      display: none;
+    }
+  }
+
+  .reviews__item {
+    .reviews__author-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000000;
+    }
+    .reviews__author-age {
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+  .reviews__wrapper::after {
+    width: 298px;
+    height: 345px;
+    background-size: 100%;
+    top: 20px;
+    left: 130px;
+  }
+}

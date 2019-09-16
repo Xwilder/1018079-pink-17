@@ -1,144 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HTML Academy: Пинк</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 </head>
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Pink">
-    </a>
-    <button class="main-nav__toggle" type="button"></button>
-    <div class="main-nav__wrapper">
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a>Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="page-header__nav">
+      <div class="page-header__nav-header">
+        <a class="page-header__logo">
+          <picture class="page-header__logo-picture">
+            <source media="(min-width:1200px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width:768px)" srcset="img/logo-pink-white-tablet.svg">
+            <img class="photo__item--img" src="img/logo-pink-white-mobile.svg" alt="фотография пользователя">
+          </picture>
+        </a>
+        <button class="main-nav__toggle" type="button"><img class="page-header__logo-image" src="img/icon-menu-burger.svg" alt="Pink"></button>
+      </div>
+      <div class="main-nav__wrapper">
+        <nav class="main-nav">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__item-a" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-a" href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-a" href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-a" href="#">HTMLAcademy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main class="page-main">
+  <main class="main-form">
 
     <div class="headline__wrapper">
       <h1 class="headline__item">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </div>
     <form class="form__registration" action="https://echo.htmlacademy.ru">
-      <h2 class="form__headline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</h2>
+      <h2 class="form__headline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <span class="form__headline-in">Пожалуйста, заполните форму ниже:</span>
+      </h2>
       <div class="form__name">
-        <label class="form__name-label">Фамилия:
-          <input class="name-label__input" type="text" placeholder="Укажите фамилию*" name="Фамилия" required>
+        <label class="form__name-label redcap">Фамилия:
+          <input class="name-label__input name-label__surname" type="text" placeholder="Укажите фамилию*" name="Фамилия" required>
         </label>
-        <label class="form__name-label">Имя:
-          <input class="name-label__input" type="text" placeholder="Введите ваше имя*" name="Имя" required>
+        <label class="form__name-label redcap">Имя:
+          <input class="name-label__input name-label__name" type="text" placeholder="Введите ваше имя*" name="Имя" required>
         </label>
-        <label class="form__name-label">Отчество:
-          <input class="name-label__input" type="text" placeholder="Ну и отчество тоже" name="Отчество">
+        <label class="form__name-label redcap">Отчество:
+          <input class="name-label__input name-label__patronymic" type="text" placeholder="Ну и отчество тоже" name="Отчество">
         </label>
       </div>
-      <div class="form__progress progress">
-        <h3 class="progress__headline">Ваши безбашенные
-          достижения в путешествии</h3>
+      <fieldset class="form__progress progress">
+        <legend class="progress__headline redcap">Ваши безбашенные достижения в путешествии</legend>
         <ul class="progress__list">
           <li class="progress__item">
-            <label class="progress__item-label">
-              <input class="item-label__checkbox" type="checkbox" value="Сделал селфи с акулой">Сделал селфи с акулой
+            <input class="item-label__checkbox" type="checkbox" value="Сделал селфи с акулой" id="selfy-label">
+            <label class="progress__item-label" for="selfy-label">Сделал селфи с акулой
             </label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">
-              <input class="item-label__checkbox" type="checkbox" value="Обгорел на пляже">Обгорел на пляже
+            <input class="item-label__checkbox" type="checkbox" value="Обгорел на пляже" id="burned-label">
+            <label class="progress__item-label" for="burned-label">Обгорел на пляже
             </label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">
-              <input class="item-label__checkbox" type="checkbox" value="Видел Чака Норриса">Видел Чака Норриса
+            <input class="item-label__checkbox" type="checkbox" value="Видел Чака Норриса" id="Chuck-Norris-label">
+            <label class="progress__item-label" for="Chuck-Norris-label">Видел Чака Норриса
             </label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">
-              <input class="item-label__checkbox" type="checkbox" value="Накупил сувениров">Накупил сувениров
+            <input class="item-label__checkbox" type="checkbox" value="Накупил сувениров" id="souvenir-label">
+            <label class="progress__item-label" for="souvenir-label">Накупил сувениров
             </label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">
-              <input class="item-label__checkbox" type="checkbox" value="Удержал башню">Удержал башню
-            </label>
+            <input class="item-label__checkbox" type="checkbox" value="Удержал башню" id="tower-label">
+            <label class="progress__item-label" for="tower-label">Удержал башню</label>
           </li>
           <li class="progress__item">
-            <label class="progress__item-label">
-              <input class="item-label__checkbox" type="checkbox" value="Разгромил отель">Разгромил отель
+            <input class="item-label__checkbox" type="checkbox" value="Разгромил отель" id="crushed-label">
+            <label class="progress__item-label" for="crushed-label">Разгромил отель
             </label>
           </li>
         </ul>
-      </div>
+      </fieldset>
 
-      <div class="form__phone">
-        <label class="form__phone-label">Номер телефона:
+      <fieldset class="form__phone">
+        <legend class="form__phone-legend redcap">Контактная информация</legend>
+        <label class="form__phone-label redcap">Номер телефона:
           <input class="phone-label__input" type="tel" placeholder="Номер, пожалуйста" name="Номер телефона">
         </label>
-        <label class="form__phone-label">Адрес почты:
+        <label class="form__phone-label redcap">Адрес почты:
           <input class="phone-label__input" type="email" placeholder="Введите почту*" name="Адрес почты" required>
         </label>
-      </div>
+      </fieldset>
 
-      <div class="form__app">
-        <h3 class="form__app-headline">С каким приложением путешествовали?</h3>
+      <fieldset class="form__app">
+        <legend class="form__app-headline redcap">С каким приложением путешествовали?</legend>
         <ul class="app__list">
           <li class="app__item">
-            <label class="app__item-label">
-              <input class="item-label__radio" type="radio" name="app" value="Pink для iOS">Pink для iOS
+            <input class="item-label__radio" type="radio" name="app" value="Pink для iOS" id="ios-label">
+            <label class="app__item-label" for="ios-label">Pink для iOS
             </label>
           </li>
           <li class="app__item">
-            <label class="app__item-label">
-              <input class="item-label__radio" type="radio" name="app" value="Pink на Android">Pink на Android
+            <input class="item-label__radio" type="radio" name="app" value="Pink на Android" id="android-label">
+            <label class="app__item-label" for="android-label">Pink на Android
             </label>
           </li>
           <li class="app__item">
-            <label class="app__item-label">
-              <input class="item-label__radio" type="radio" name="app" value="Windows Phone">Windows Phone
+            <input class="item-label__radio" type="radio" name="app" value="Windows Phone" id="windows-label">
+            <label class="app__item-label" for="windows-label">Windows Phone
             </label>
           </li>
         </ul>
-      </div>
+      </fieldset>
 
-      <div class="form__emotions">
-        <h3 class="form__emotions-headline">Опишите свои эмоции</h3>
+      <fieldset class="form__emotions">
+        <legend class="form__emotions-headline redcap">Опишите свои эмоции</legend>
         <textarea class="form__emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях" name="emotions"></textarea>
-      </div>
+      </fieldset>
 
       <button type="submit" class="form__button">Отправить форму</button>
 
-      <p class="form__legend"><sup>*</sup> — обязательные поля</p>
+      <p class="form__legend"><sup class="legend__star">*</sup> — обязательные <span class="legend__invisible">для заполнения</span> поля</p>
 
     </form>
   </main>
 
+
   <footer class="page-footer">
-    <a class="page-footer__logo">
-      <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Pink">
-    </a>
-    <ul class="social__list">
-      <li class="social__item--Twiter">Twiter</li>
-      <li class="social__item--Facebook">Facebook</li>
-      <li class="social__item--YouTube">YouTube</li>
-    </ul>
-    <p class="developed__wrapper">Разработано</p>
-    <img src="" alt="HTMLacademy">
+    <div class="footer__footer">
+      <a class="footer__logo">
+        <img class="header__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Pink">
+      </a>
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="#" class="social__item-page">
+            <svg class="social__item-svg" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve"><g id="W6EeEF_1_"><g><path fill="" fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/></g></g></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__item-page">
+            <svg class="social__item-svg" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve"><path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__item-page">
+            <svg class="social__item-svg" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve"><path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/></svg>
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="developed__wrapper">
+        <p class="developed__headline">Разработано</p>
+        <svg class="developed__headline-img" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve"><path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/></svg>
+      </a>
+    </div>
   </footer>
 </body>
 </html>

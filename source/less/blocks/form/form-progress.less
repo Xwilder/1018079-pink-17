@@ -1,0 +1,71 @@
+@import "../../variables";
+
+.form__progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  background-color: #f2f2f2;
+}
+
+.progress__headline {
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  margin-top: 37px;
+}
+
+.progress__list {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.progress__item {
+  min-height: 82px;
+  .progress__item-label {
+    font-size: 18px;
+    line-height: 1.67;
+    color: #283645;
+    margin-left: 33px;
+    margin-top: 47px;
+  }
+}
+
+.progress__item:last-of-type {
+  margin-bottom: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__progress {
+    order: 5;
+    width: 616px;
+    background: none;
+    border: solid 2px #e5e5e5;
+    padding: 0;
+    margin-top: 51px;
+    height:  557px;
+  }
+  .progress__headline {
+    width: 436px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__progress {
+    order: 5;
+    width: 936px;
+    margin-top: 57px;
+    height:  236px;
+  }
+  .progress__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height:  220px;
+    margin-top: 0;
+    .progress__item {
+      width: 30%;
+    }
+  }
+
+}

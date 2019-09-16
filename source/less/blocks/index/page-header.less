@@ -1,0 +1,141 @@
+@import "../../variables";
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.page-header__nav {
+  background: #283645;
+}
+
+.page-header__nav-header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 69px;
+  width: 280px;
+  border-bottom: 1px solid #000000;
+}
+
+.page-header__logo {
+  margin-top: 22px;
+  margin-left: 20px;
+}
+
+.main-nav__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  .site-list__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 14px;
+    background: #283645;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #000000;
+    height: 63px;
+  }
+  .site-list__item-a {
+    height: 63px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.78;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__nav-header {
+    min-height: 110px;
+    width: 660px;
+    background: #283645;
+  }
+  .page-header__logo {
+    margin-top: 27px;
+    margin-left: 40px;
+  }
+  .main-nav {
+    .site-list__item {
+      flex-direction: column;
+      width: 100%;
+    }
+    .site-list__item-a {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+
+@media (min-width: @desktop-width) {
+ .page-header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: none;
+
+   .page-header__nav {
+     width: 1200px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     background-color: rgba(0, 0, 0, 0.3);
+   }
+
+   .page-header__nav-header {
+     width: 150px;
+     margin-left: 130px;
+     background: none;
+   }
+   .page-header__logo {
+     margin-top: 27px;
+     margin-left: 0;
+   }
+   .main-nav__list {
+     display: flex;
+     flex-direction: row;
+   }
+ }
+  .main-nav__wrapper {
+    min-width: 660px;
+    margin-right: 90px;
+    .main-nav {
+      height: 100%;
+    }
+  }
+  .main-nav__list {
+    height: inherit;
+    .site-list__item {
+      background: none;
+      border: none;
+      width: auto;
+    }
+  }
+  .main-nav__toggle {
+    display: none;
+  }
+  .site-list__item {
+    .site-list__item-a {
+      color: #ffffff;
+      padding: 0 30px;
+      text-transform: none;
+      font-weight: normal;
+    }
+  }
+
+}

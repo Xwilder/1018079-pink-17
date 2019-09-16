@@ -1,0 +1,68 @@
+
+@import "fonts";
+@import "normalize";
+@import "variables";
+
+@import "blocks/index/page-header";
+@import "blocks/index/main-index";
+@import "blocks/index/download";
+@import "blocks/index/information";
+@import "blocks/index/reviews";
+@import "blocks/index/page-footer";
+@import "blocks/index/price";
+
+@import "blocks/photo/main-photo";
+@import "blocks/photo/user-photos";
+@import "blocks/photo/photo-list";
+@import "blocks/photo/upload";
+@import "blocks/photo/footer";
+
+@import "blocks/form/main-form";
+@import "blocks/form/form-registration";
+@import "blocks/form/form-name";
+@import "blocks/form/form-progress";
+@import "blocks/form/form-phone";
+@import "blocks/form/form-app";
+@import "blocks/form/form-emotions";
+
+//@import "scaffolding";
+
+body {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  background: #ffffff;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+li {
+  list-style-type: none;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+}
+
+//body > * { background: rgba(255, 0, 0, 0.3); }
+//body > * > * { background: rgba(255, 255, 0, 0.3);}
+//body > * > * > * { background: rgba(0, 0, 255, 0.3); }
+//body > * > * > * > * { background: rgba(0, 255, 255, 0.3); }
