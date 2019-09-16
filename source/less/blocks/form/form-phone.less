@@ -1,9 +1,6 @@
 @import "../../variables";
 
 .form__phone {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   width: 280px;
 }
 
@@ -22,11 +19,11 @@
 
 .phone-label__input {
   width: 276px;
-  height: 59px;
+  height: 54px;
   border: solid 2px #e5e5e5;
 }
 
-.phone-label__input:last-of-type {
+.phone-label__input {
   margin-bottom: 42px;
 }
 
@@ -59,14 +56,46 @@
     border: solid 2px #e5e5e5;
     margin-top: 25px;
     height: 165px;
-    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0 60px;
   }
+  .form__phone-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+  }
+
   .form__phone-label {
     width: 371px;
+    height: 150px;
     margin: 0;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .phone-label__span {
+    padding-left: 18px;
+    order: 3;
+  }
+  .phone-label__svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #e5e5e5;
+    flex: 0 0 60px;
+    .label__svg-fill {
+      fill: #d22856;
+    }
   }
   .form__phone-label:first-of-type {
     margin-top: 0;
+  }
+  .phone-label__input {
+    margin-bottom: 0;
+    flex: 0 1 auto;
   }
 }
