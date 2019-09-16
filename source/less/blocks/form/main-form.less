@@ -22,11 +22,18 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
   .headline__wrapper {
     background: url("../img/bg-back-tablet.jpg") no-repeat 100%;
     min-height: 729px;
     background-position: center;
     margin-top: -116px;
+    width: 100%;
+    z-index: -1;
   }
   .headline__item {
     max-width: 475px;
