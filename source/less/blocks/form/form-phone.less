@@ -2,31 +2,37 @@
 
 .form__phone {
   width: 280px;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
-
+.form__phone-legend {
+  display: none;
+}
+.form__phone-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 27px;
+}
 .form__phone-label {
   font-size: 14px;
   line-height: 2.14;
-  margin-left: 20px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 17px;
 }
-
-.form__phone-label:first-of-type {
-  margin-top: 31px;
-
+.phone-label__span {
+  margin-left: 22px;
 }
-
+.phone-label__svg {
+  display: none;
+}
 .phone-label__input {
   width: 276px;
-  height: 54px;
+  height: 60px;
   border: solid 2px #e5e5e5;
+  margin-top: 5px;
 }
-
-.phone-label__input {
-  margin-bottom: 42px;
-}
-
 .phone-label__input::placeholder {
   font-size: 18px;
   line-height: 1.67;
@@ -44,9 +50,55 @@
     height: 314px;
   }
   .form__phone-legend {
+    display: inline-block;
     text-align: center;
     width: 260px;
     font-size: 14px;
+  }
+  .form__phone-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 273px;
+    margin-top: 25px;
+
+    .form__phone-label {
+      width: 497px;
+      height: 110px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: -10px;
+    }
+  }
+  .phone-label__span {
+    padding-left: 18px;
+    order: 3;
+    margin: 0;
+  }
+  .phone-label__svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #e5e5e5;
+    flex: 0 0 60px;
+    .label__svg-fill {
+      fill: #d22856;
+    }
+  }
+  .form__phone-label:first-of-type {
+    margin-top: 0;
+  }
+  .phone-label__input {
+    flex: 0 1 auto;
+    width: 437px;
+    margin: 0;
+    box-sizing: border-box;
   }
 }
 
@@ -55,7 +107,7 @@
     width: 936px;
     border: solid 2px #e5e5e5;
     margin-top: 25px;
-    height: 165px;
+    height: 169px;
     box-sizing: border-box;
     padding: 0 60px;
   }
@@ -65,15 +117,16 @@
     justify-content: space-between;
     align-items: center;
     height: 150px;
-  }
 
-  .form__phone-label {
-    width: 371px;
-    height: 150px;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    .form__phone-label {
+      width: 371px;
+      height: 110px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
   }
   .phone-label__span {
     padding-left: 18px;
@@ -92,10 +145,12 @@
     }
   }
   .form__phone-label:first-of-type {
-    margin-top: 0;
+    margin-top: 35px;
   }
   .phone-label__input {
     margin-bottom: 0;
     flex: 0 1 auto;
+    width: 307px;
   }
+
 }
