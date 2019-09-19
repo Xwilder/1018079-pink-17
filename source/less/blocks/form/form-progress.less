@@ -30,16 +30,40 @@
   flex-direction: row;
   align-items: center;
   min-height: 82px;
-  .progress__item-label {
-    font-size: 18px;
-    line-height: 1.67;
-    color: #283645;
-    margin-left: 33px;
-  }
 }
 
 .progress__item:last-of-type {
   margin-bottom: 10px;
+}
+
+.progress__item-label {
+  font-size: 18px;
+  line-height: 1.67;
+  color: #283645;
+  margin-left: 33px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .item-label__checked {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: solid 2px #e5e5e5;
+    margin-right: 23px;
+  }
+  .item-label__checked-svg {
+    display: none;
+  }
+  .item-label__checkbox:checked + .item-label__checked .item-label__checked-svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    fill: #d22856;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -49,11 +73,16 @@
     background: none;
     border: solid 2px #e5e5e5;
     padding: 0;
-    margin-top: 51px;
+    margin-top: 57px;
     height:  557px;
   }
   .progress__headline {
     width: 436px;
+    padding: 0;
+  }
+  .progress__list {
+    margin-left: 60px;
+    margin-top: 22px;
   }
 }
 
@@ -72,13 +101,12 @@
     flex-wrap: wrap;
     height:  220px;
     margin-top: 20px;
+    margin-left: 0;
   }
   .progress__item {
     justify-content: space-between;
-    margin-right: 63px;
     .progress__item-label {
       margin: 0;
     }
   }
-
 }
