@@ -22,14 +22,38 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  position: relative;
+  background-color: #f2f2f2;
+  width: 320px;
+  height: 757px;
+}
+.upload__block::before {
+  position: absolute;
+  content: "";
+  width: 280px;
+  height: 374px;
+  background: url("../img/photo-road-mobile@1x.jpg") no-repeat;
+  top: 20px;
+  left: 20px;
 }
 
 .upload__tools-list {
-  margin-top: 42px;
+  margin-top: 440px;
   padding: 0;
   display: flex;
   flex-direction: row;
-  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  width: 208px;
+}
+.upload__tools-item {
+  .tools__item-crop {
+    fill: #d22856;
+  }
+  .tools__item-fill,
+  .tools__item-contrast {
+    fill: rgba(0, 0, 0, 0.3);
+  }
 }
 .upload__tools-range-controls {
   display: none;
@@ -58,6 +82,7 @@
     border-radius: 50%;
   }
 }
+
 
 .upload__button {
   background: none;
