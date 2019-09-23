@@ -5,31 +5,40 @@
   flex-direction: column;
   align-items: flex-start;
   max-width: 280px;
-  .form__name-label {
-    width: 100%;
-    font-size: 14px;
-    line-height: 2.14;
-    padding-left: 20px;
-    margin-top: 17px;
-    margin-bottom: 0px;
+}
+.form__name-label {
+  width: 100%;
+  font-size: 14px;
+  line-height: 2.14;
+  padding-left: 20px;
+  margin-top: 17px;
+  margin-bottom: 0px;
+}
+.form__name-label:first-of-type {
+  margin-top: 20px;
+}
+.name-label__input {
+  width: 276px;
+  height: 57px;
+  border: solid 2px #e5e5e5;
+  margin-left: -20px;
+  margin-top: 6px;
+  border-radius: 4px;
+  &:hover {
+    border: solid 2px #283645;
   }
-  .form__name-label:first-of-type {
-    margin-top: 20px;
-  }
-  .name-label__input {
-    width: 276px;
-    height: 57px;
-    border: solid 2px #e5e5e5;
-    margin-left: -20px;
-    margin-top: 6px;
-  }
-  .name-label__input::placeholder {
-    font-size: 18px;
-    line-height: 1.67;
-    color: #283645;
-    padding-left: 20px;
+  &:focus {
+    border: solid 2px #d22856;
+    outline: none;
   }
 }
+  &::placeholder {
+  font-size: 18px;
+  line-height: 1.67;
+  color: #283645;
+  padding-left: 20px;
+}
+
 .redcap {
   text-transform: uppercase;
   color: #d22856;
