@@ -45,12 +45,19 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  &:hover > .item-label__checked {
+    border: solid 2px #283645;
+  }
+  &:active > .item-label__checked {
+    border: solid 2px #d22856;
+  }
   .item-label__checked {
     display: block;
     width: 35px;
     height: 35px;
     border: solid 2px #e5e5e5;
     margin-right: 23px;
+    border-radius: 4px;
   }
   .item-label__checked-svg {
     display: none;
