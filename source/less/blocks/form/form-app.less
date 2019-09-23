@@ -32,9 +32,12 @@
   justify-content: center;
   min-height: 75px;
   .app__item-label {
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.29;
+   &:hover > .item-label__checked {
+     border: solid 2px #283645;
+    }
+   &:active > .item-label__checked {
+     border: solid 2px #d22856;
+   }
   }
 }
 
@@ -42,6 +45,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
   .item-label__checked {
     display: block;
     width: 36px;
