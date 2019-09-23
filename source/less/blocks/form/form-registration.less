@@ -25,7 +25,7 @@
   width: 280px;
   height: 60px;
   border: solid 2px #2aab6d;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #2aab6d;
   font-size: 18px;
   font-weight: bold;
@@ -34,6 +34,13 @@
   color: #ffffff;
   text-transform: uppercase;
   margin-top: 32px;
+  &:hover {
+    border: solid 2px #1c9b5e;
+    background-color: #1c9b5e;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .form__legend {
