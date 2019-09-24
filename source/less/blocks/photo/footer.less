@@ -22,7 +22,25 @@
 
 .footer__logo {
   margin-top: 40px;
+  .footer__logo-image {
+    fill: #d22856;
+    & > g > path {
+      fill: #283645;
+    }
+  }
+  &:hover > .footer__logo-image > g > path {
+     fill: #d22856;
+   }
+  &:active > .footer__logo-image {
+    g > path {
+      fill: rgba(40, 54, 69, 0.3);
+    }
+    path {
+      fill: rgba(210, 40, 86, 0.3);
+    }
+  }
 }
+
 
 .social__list {
   margin-top: 105px;
