@@ -1,0 +1,64 @@
+@import "../../variables";
+
+.menu-btn {
+  display: block;
+  width: 70px;
+  height: 69px;
+  position: relative
+}
+.btn,
+.btn::before,
+.btn::after {
+  position: absolute;
+  top: 50%; margin-top: -2px;
+  left: 50%; margin-left: -15px;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+}
+.btn::before,
+.btn::after {
+  content: '';
+  display: block;
+  transition: 0.2s;
+}
+.btn::before {
+  transform: translateY(-10px);
+}
+.btn::after {
+  transform: translateY(10px);
+}
+.btn-active .btn::before {
+  transform: rotate(45deg);
+}
+.btn-active .btn::after {
+  transform: rotate(-45deg);
+}
+.btn-active .btn {
+  height: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .menu-btn {
+    display: block;
+    width: 130px;
+    height: 105px;
+    position: relative
+  }
+  .btn,
+  .btn::before,
+  .btn::after {
+    position: absolute;
+    top: 50%; margin-top: -2px;
+    left: 50%; margin-left: -25px;
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .menu-btn {
+    display: none;
+  }
+}
