@@ -1,5 +1,10 @@
 @import "../../variables";
 
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .headline__wrapper {
   background: url("../img/bg-back-mobile.jpg") no-repeat 100%;
   min-height: 465px;
@@ -22,11 +27,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-form {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   }
   .headline__wrapper {
     background: url("../img/bg-back-tablet.jpg") no-repeat 100%;
     min-height: 729px;
