@@ -13,6 +13,15 @@
 }
 .reviews__list {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviews-arrow-left,
+.reviews-arrow-right {
+  display: none;
 }
 
 .reviews__list:after {
@@ -109,9 +118,6 @@
   }
   .reviews__list {
     width: 660px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .reviews__item {
     display: flex;
@@ -174,9 +180,27 @@
     }
     .reviews__list {
       width: 1200px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .reviews-arrow-left,
+      .reviews-arrow-right {
+        fill: rgba(40, 54, 69, 0.3);
+        display: block;
+        &:hover {
+          fill: rgb(40, 54, 69);
+        }
+        &:active {
+          fill: rgba(40, 54, 69, 0.1);
+        }
+      }
+
       .reviews__item {
         width: 685px;
         margin-top: 170px;
+        margin-left: 100px;
+        margin-right: 100px;
       }
     }
     .reviews__toggles {
