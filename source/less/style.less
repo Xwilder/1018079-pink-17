@@ -32,7 +32,11 @@ body {
   width: 100%;
   font-family: "Open Sans", sans-serif;
   background: #ffffff;
+  background: url("../img/bg-back-mobile.jpg") no-repeat 100%;
+  background-size: auto;
+  background-position: top;
 }
+
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -63,7 +67,18 @@ li {
   }
 }
 
-//body > * { background: rgba(255, 0, 0, 0.3); }
-//body > * > * { background: rgba(255, 255, 0, 0.3);}
-//body > * > * > * { background: rgba(0, 0, 255, 0.3); }
-//body > * > * > * > * { background: rgba(0, 255, 255, 0.3); }
+@media (min-width: @tablet-width) {
+  body{
+    background: url("../img/bg-back-tablet.jpg") no-repeat 100%;
+    background-size: auto;
+    background-position: top;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    background: url("../img/bg-back-desktop.jpg") no-repeat 100%;
+    background-size: auto;
+    background-position: top;
+  }
+}
