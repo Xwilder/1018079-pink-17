@@ -4,6 +4,9 @@ var menubtn = document.querySelector(".menu-btn");
 
 var slideIndex = 1;
 
+var touchstartX = 0;
+var touchendX = 0;
+var reviewsList = document.querySelector('.reviews__item');
 
 window.onload = function (evt) {
   evt.preventDefault();
@@ -33,6 +36,29 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("reviews__item");
   var toggle = document.getElementsByClassName("slider__toggle");
 
+  reviewsList.addEventListener("touchstart", function(event) {
+    touchstartX = event.changedTouches["0"].screenX;
+    console.log(touchstartX);
+  }, );
+
+  reviewsList.addEventListener("touchend", function(event) {
+    touchendX = event.changedTouches["0"].screenX;
+    console.log(touchendX);
+    handleGesure();
+  }, );
+
+  function handleGesure() {
+    if (touchendX < touchstartX) {
+      showSlides(slideIndex += 1);
+    }
+    if (touchendX > touchstartX) {
+      showSlides(slideIndex += -1);
+    }
+    if (touchendX == touchstartX) {
+      showSlides(slideIndex += 0);
+    }
+  }
+
   if (n > slides.length) {
     slideIndex = 1
   }
@@ -49,3 +75,5 @@ function showSlides(n) {
 
   toggle[slideIndex-1].className+= " active";
 }
+console.log(touchstartX);
+console.log(touchendX);
