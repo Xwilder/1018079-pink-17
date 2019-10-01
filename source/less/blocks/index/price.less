@@ -4,9 +4,13 @@
   min-height: 437px;
   background-color: #f2f2f2;
   position: relative;
-  //overflow: hidden;
+  overflow: hidden;
   width: 320px;
   margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .diagonal {
      position: absolute;
      top: 25px;
@@ -21,7 +25,6 @@
   }
 }
 .price-table {
-  width: 100%;
   border-collapse: collapse;
   .price-table__first-stroke {
     display: flex;
@@ -36,6 +39,9 @@
       background-color: #283645;
       box-sizing: border-box;
       border-radius: 4px;
+      &:first-of-type {
+        display: none;
+      }
       &:nth-child(2) {
         border-right: solid 2px #fff;
       }
@@ -66,10 +72,7 @@
       border: solid 1px #e5e5e5;
       box-sizing: border-box;
       &:first-of-type {
-        align-items: center;
-        justify-content: flex-start;
-        padding-left: 24px;
-        border-left: solid 2px #e5e5e5;
+        display: none;
       }
       &:last-of-type {
         border-right: solid 2px #e5e5e5;
@@ -154,47 +157,49 @@
       display: none;
     }
   }
-
-  .price__item {
-    width: 152px;
-    .price__header {
-      width: 152px;
-      min-height: 75px;
-      border: solid 2px #283645;
-      background-color: #283645;
-      .price__name {
-        margin-top: 11px;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 1.88;
-        text-align: center;
-        color: #ffffff;
-      }
-      .price__value {
-        margin-top: 3px;
-        margin-bottom: 0;
-        font-size: 18px;
-        font-weight: 300;
-        text-align: center;
-        color: #ffffff;
+  .price-table {
+    .price-table__first-stroke {
+      .table__cell {
+        width: 152px;
+        height: 75px;
+        .price__name {
+          margin: 0;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 1.88;
+          text-align: center;
+          color: #ffffff;
+        }
+        .price__value {
+          margin: 0;
+          font-size: 18px;
+          font-weight: 300;
+          text-align: center;
+          color: #ffffff;
+        }
+        &:first-of-type {
+          display: block;
+        }
       }
     }
-    .price-tag__item {
-      width: 152px;
-      min-height: 47px;
-    }
-    .price__mobile-headline {
-      display: none;
+    .price-table__stroke {
+      .table__cell {
+        width: 152px;
+        height: 45px;
+        .price__mobile-headline {
+          display: none;
+        }
+        &:first-of-type {
+          display: block;
+          align-items: flex-start;
+          justify-content: center;
+          padding-left: 24px;
+          font-size: 14px;
+          border-left: solid 2px #e5e5e5;
+        }
+      }
     }
   }
-  .price__item--none {
-    .price__header {
-      background: none;
-      border: none;
-    }
-  }
-
-
 
   .price__desktop-cheked {
     display: block;
@@ -239,9 +244,6 @@
       background: none;
       border: none;
     }
-  }
-  .price__mobile-headline {
-    display: none;
   }
 
 }
