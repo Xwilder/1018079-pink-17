@@ -62,20 +62,23 @@
   0% {opacity: .4}
   100% {opacity: 1}
 }
-
-.reviews__list:after {
-  position: absolute;
-  content: "";
-  bottom: -105px;
-  left: 0;
-  border-right: 100vw solid #f2f2f2;
-  border-top: 8vw solid transparent;
-  z-index: -1;
+.reviews__list {
+  //position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -105px;
+    left: 0;
+    border-right: 100vw solid #f2f2f2;
+    border-top: 8vw solid transparent;
+    z-index: -1;
+  }
 }
 .reviews__item {
   width: 280px;
   text-align: center;
   margin-top: 40px;
+  //position: absolute;
   .reviews__text {
     margin-top: 15px;
     min-height: 165px;
@@ -93,6 +96,20 @@
   }
 }
 
+.slider_none-left {
+  animation-name: sliderNoneLeft;
+  animation-duration: 1s;
+}
+
+@keyframes sliderNoneLeft {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    left: -400px;
+    opacity: 0;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .reviews__wrapper {
