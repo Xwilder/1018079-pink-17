@@ -6,8 +6,10 @@ var slideIndex = 1;
 
 var touchstartX = 0;
 var touchendX = 0;
-var reviewsList = document.querySelector('.reviews__item');
+var reviewsList = document.querySelector('.reviews__list');
+var priceList =  document.querySelector('.price-table');
 
+//раскрытие меню
 window.onload = function (evt) {
   evt.preventDefault();
   mainNav.classList.add("nav-close");
@@ -21,6 +23,7 @@ menubtn.addEventListener("click", function toggle (evt) {
   mainNav.classList.toggle("nav-close");
 });
 
+//слайдер коментариев
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -31,33 +34,36 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+reviewsList.addEventListener("touchstart", function(event) {
+  touchstartX = event.changedTouches["0"].screenX;
+}, );
+
+reviewsList.addEventListener("touchend", function(event) {
+  touchendX = event.changedTouches["0"].screenX;
+  touchFunc();
+}, );
+
+function touchFunc() {
+  if (touchendX < touchstartX) {
+    n = 1;
+    showSlides(slideIndex += n);
+  }
+  if (touchendX > touchstartX) {
+    n = -1
+    showSlides(slideIndex += n);
+  }
+  if (touchendX == touchstartX) {
+    n = 0
+    showSlides(slideIndex += n);
+  }
+}
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("reviews__item");
   var toggle = document.getElementsByClassName("slider__toggle");
 
-  reviewsList.addEventListener("touchstart", function(event) {
-    touchstartX = event.changedTouches["0"].screenX;
-    console.log(touchstartX);
-  }, );
 
-  reviewsList.addEventListener("touchend", function(event) {
-    touchendX = event.changedTouches["0"].screenX;
-    console.log(touchendX);
-    handleGesure();
-  }, );
-
-  function handleGesure() {
-    if (touchendX < touchstartX) {
-      showSlides(slideIndex += 1);
-    }
-    if (touchendX > touchstartX) {
-      showSlides(slideIndex += -1);
-    }
-    if (touchendX == touchstartX) {
-      showSlides(slideIndex += 0);
-    }
-  }
 
   if (n > slides.length) {
     slideIndex = 1
@@ -75,5 +81,34 @@ function showSlides(n) {
 
   toggle[slideIndex-1].className+= " active";
 }
-console.log(touchstartX);
-console.log(touchendX);
+
+//слайдер таблицы цен
+priceList.addEventListener("touchstart", function(event) {
+  touchstartX = event.changedTouches["0"].screenX;
+  console.log(touchstartX);
+}, );
+
+priceList.addEventListener("touchend", function(event) {
+  touchendX = event.changedTouches["0"].screenX;
+  console.log(touchendX);
+  priceTouchFunc();
+}, );
+
+function priceTouchFunc() {
+  var table = document.getElementsByClassName("price-table");
+
+  if (touchendX > touchstartX) {
+    left = left - 180;
+    table.style.left = left + 'px';
+    console.log(left);
+  }
+  if (touchendX < touchstartX) {
+    left = left + 180;
+    table.style.left = left + 'px';
+    console.log(left);
+  }
+  if (touchendX == touchstartX) {
+    n = 0
+    showSlides(slideIndex += n);
+  }
+}
