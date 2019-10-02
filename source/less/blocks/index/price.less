@@ -26,6 +26,8 @@
 }
 .price-table {
   border-collapse: collapse;
+  position: absolute;
+  left: -180px;
   .price-table__first-stroke {
     display: flex;
     flex-direction: row;
@@ -127,7 +129,36 @@
   }
 }
 
+.price__toggles {
+  width: 280px;
+  text-align: center;
+  .slider__toggle {
+    cursor: pointer;
+    height: 6px;
+    width: 6px;
+    margin: 0 2px;
+    opacity: 0.3;
+    background-color: #283645;
+    border: solid 3px transparent;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    &:hover {
+      opacity: 0.6;
+      background-color: #283645;
+    }
+    &:active {
+      opacity: 0.1;
+      background-color: #283645;
+    }
 
+  }
+  .slider__toggle.active {
+    opacity: 1;
+    border: solid 3px #283645;
+    background-color: #ffffff;
+  }
+}
 
 .advantages__toggles {
   width: 280px;
@@ -186,6 +217,7 @@
       .table__cell {
         width: 152px;
         height: 45px;
+        background: #ffffff;
         .price__mobile-headline {
           display: none;
         }
