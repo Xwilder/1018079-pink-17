@@ -95,20 +95,16 @@ priceList.addEventListener("touchend", function(event) {
 }, );
 
 function priceTouchFunc() {
-  var table = document.getElementsByClassName("price-table");
-
+  var table = document.querySelector(".price-table");
+  // var left = -180;
   if (touchendX > touchstartX) {
-    left = left - 180;
-    table.style.left = left + 'px';
-    console.log(left);
+    table.style.left = table.style.left + 180 + 'px';
   }
   if (touchendX < touchstartX) {
-    left = left + 180;
-    table.style.left = left + 'px';
-    console.log(left);
+    table.style.left = table.style.left - 180 + 'px';
   }
   if (touchendX == touchstartX) {
-    n = 0
-    showSlides(slideIndex += n);
+    left = left
   }
+  console.log(table.style.left);
 }
